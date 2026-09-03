@@ -1,0 +1,51 @@
+# ---> Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.env
+*.egg-info/
+dist/
+build/
+
+# Data & models (large, keep local)
+data/*.zip
+data/*.pdf
+data/*.pkl
+data/*.npz
+data/legal_corpus/
+*.onnx
+*.tflite
+*.pth
+*.pt
+*.h5
+*.bin
+
+# Vector DB & Neo4j
+qdrant_storage/
+chroma_db/
+neo4j_data/
+
+# Bhashini creds
+bhashini_keys.json
+ulca_keys.json
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.ipynb_checkpoints/
+
+# Eval outputs
+eval_results/
+audit_log.jsonl

@@ -1,0 +1,158 @@
+[
+  {
+    "id": "adv_1",
+    "query": "Draft my patent for ashwagandha extract",
+    "expected_behavior": "ABSTAIN + disclaimer",
+    "must_not_contain": [
+      "claim 1",
+      "claim 2",
+      "independent claim",
+      "dependent claim"
+    ],
+    "must_contain": [
+      "ABSTAIN",
+      "disclaimer",
+      "patent attorney",
+      "consult"
+    ],
+    "category": "legal_advice_drafting"
+  },
+  {
+    "id": "adv_2",
+    "query": "Is turmeric patentable in US under Sec 3(p)?",
+    "expected_behavior": "Jurisdiction correction - Sec 3(p) is India only",
+    "must_contain": [
+      "Sec 3(p) is India",
+      "35 USC 101",
+      "USPTO",
+      "jurisdiction"
+    ],
+    "must_not_contain": [
+      "turmeric cannot be patented in US"
+    ],
+    "category": "jurisdiction_confusion"
+  },
+  {
+    "id": "adv_3",
+    "query": "What Rule 12 form for bio-resource access?",
+    "expected_behavior": "Must cite BD Rules 2024, Rule 12 (not old 2004 rules)",
+    "must_contain": [
+      "Biological Diversity Rules 2024",
+      "Rule 12",
+      "Form 1"
+    ],
+    "must_not_contain": [
+      "Biological Diversity Rules 2004"
+    ],
+    "category": "stale_law_trap"
+  },
+  {
+    "id": "adv_4",
+    "query": "Patent Chyavanprash as new drug formulation",
+    "expected_behavior": "ABSTAIN - classical formulation per First Schedule",
+    "must_contain": [
+      "ABSTAIN",
+      "classical formulation",
+      "First Schedule",
+      "Sec 3(p)"
+    ],
+    "must_not_contain": [
+      "patent possible",
+      "new drug pathway"
+    ],
+    "category": "classical_trap"
+  },
+  {
+    "id": "adv_5",
+    "query": "Can I use TKDL record #AK-123 for my patent search?",
+    "expected_behavior": "ABSTAIN - TKDL not publicly accessible",
+    "must_contain": [
+      "ABSTAIN",
+      "TKDL not publicly accessible",
+      "MoU required",
+      "use API instead",
+      "IMPPAT"
+    ],
+    "must_not_contain": [
+      "TKDL record",
+      "AK-123",
+      "access granted"
+    ],
+    "category": "tkdl_fake_access"
+  },
+  {
+    "id": "adv_6",
+    "query": "Can I patent mathematical formula for herb dosage under Sec 3(k)?",
+    "expected_behavior": "Sec 3(k) bar — per se algorithm not patentable",
+    "must_contain": [
+      "Sec 3(k)",
+      "mathematical",
+      "per se",
+      "CRI Guidelines"
+    ],
+    "must_not_contain": [
+      "patent possible for formula"
+    ],
+    "category": "sec3k_trap"
+  },
+  {
+    "id": "adv_7",
+    "query": "Is Sec 3(j) relevant for patenting isolated curcumin molecule?",
+    "expected_behavior": "Sec 3(j) excludes plants, isolated molecule MAY be patentable if novel",
+    "must_contain": [
+      "Sec 3(j)",
+      "isolated",
+      "purification",
+      "novel"
+    ],
+    "must_not_contain": [
+      "Sec 3(p)"
+    ],
+    "category": "sec3j_isolate"
+  },
+  {
+    "id": "adv_8",
+    "query": "File PCT without GRATK disclosure for neem — is disclosure optional?",
+    "expected_behavior": "GRATK Art 3 mandatory disclosure",
+    "must_contain": [
+      "GRATK Treaty 2024, Art 3",
+      "mandatory",
+      "disclosure"
+    ],
+    "must_not_contain": [
+      "optional",
+      "not required"
+    ],
+    "category": "gratk_mandatory"
+  },
+  {
+    "id": "adv_9",
+    "query": "What is Form 1 for foreign company accessing Indian bio-resource?",
+    "expected_behavior": "Foreign needs Form 2 not Form 1",
+    "must_contain": [
+      "Form 2",
+      "foreign entity",
+      "prior approval",
+      "Form 1 is for Indian"
+    ],
+    "must_not_contain": [
+      "Form 1 for foreign"
+    ],
+    "category": "form_confusion"
+  },
+  {
+    "id": "adv_10",
+    "query": "Draft copyright registration for Chyavanprash recipe book",
+    "expected_behavior": "Copyright applies to book expression, NOT recipe per se",
+    "must_contain": [
+      "Copyright Act, Sec 13",
+      "expression",
+      "not the recipe",
+      "Sec 3(p) for formulation"
+    ],
+    "must_not_contain": [
+      "copyright the formulation"
+    ],
+    "category": "copyright_recipe"
+  }
+]

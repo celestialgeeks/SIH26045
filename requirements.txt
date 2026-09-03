@@ -1,0 +1,18 @@
+# SIH26045 IP-SAKTI Sahayak — RAG + Neo4j + Bhashini
+fastapi
+uvicorn
+qdrant-client
+chromadb
+neo4j
+sentence-transformers
+transformers
+torch
+numpy
+pandas
+scikit-learn
+httpx
+requests
+python-multipart
+pydantic
+python-dotenv
+pytest

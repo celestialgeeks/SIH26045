@@ -1,0 +1,779 @@
+[
+  {
+    "id": 1,
+    "query_hi": "क्या मैं च्यवनप्राश का पेटेंट करा सकता हूँ?",
+    "query_en": "Can I patent Chyavanprash?",
+    "expected_key_points": [
+      "NO - classical formulation",
+      "Sec 3(p) Patents Act bars traditional knowledge",
+      "TKDL prior art exists",
+      "Suggest GI / TM route instead",
+      "Reference First Schedule D&C Act"
+    ],
+    "expected_citations": [
+      "Patents Act, Sec 3(p)",
+      "Drugs & Cosmetics Act 1940, Sec 3(a)",
+      "First Schedule D&C Act"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "classical_formulation"
+  },
+  {
+    "id": 2,
+    "query_hi": "गिलॉय फाइटोफार्मास्यूटिकल को EU में निर्यात करना है",
+    "query_en": "Export giloy phytopharma to EU",
+    "expected_key_points": [
+      "GRATK Art 3 disclosure of origin mandatory",
+      "EMA Herbal Medicinal Products Directive applies",
+      "CDSCO phytopharma pathway (NDCT Rules) required first",
+      "Dual track: patent + regulatory",
+      "ABS compliance if foreign entity"
+    ],
+    "expected_citations": [
+      "GRATK Treaty 2024, Art 3",
+      "EMA Herbal Directive 2004/24/EC",
+      "NDCT Rules 2019, Rule 122E",
+      "Biological Diversity Rules 2024, Form 2"
+    ],
+    "tab": "International",
+    "jurisdiction": "International",
+    "category": "phytopharma_export"
+  },
+  {
+    "id": 3,
+    "query_hi": "अश्वगंधा कैप्सूल का भारत में पेटेंट संभव है?",
+    "query_en": "Ashwagandha capsule patent India",
+    "expected_key_points": [
+      "If NEW combination/process → patent possible (Sec 2(1)(j) novelty + inventive step)",
+      "If CLASSICAL formulation → Sec 3(p) bar",
+      "NDCT Rules 2019 clinical trial pathway if new drug",
+      "Check API for existing monograph",
+      "IMPPAT for phytochemical markers"
+    ],
+    "expected_citations": [
+      "Patents Act, Sec 2(1)(j)",
+      "Patents Act, Sec 3(p)",
+      "NDCT Rules 2019, Rule 122E",
+      "Ayurvedic Pharmacopoeia of India"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "new_vs_classical"
+  },
+  {
+    "id": 4,
+    "query_hi": "नीम निर्यात के लिए ABS अनुमति प्रक्रिया क्या है?",
+    "query_en": "ABS approval for neem export",
+    "expected_key_points": [
+      "Foreign entity → NBA prior approval mandatory",
+      "Form 2 (Biological Diversity Rules 2024)",
+      "Benefit sharing agreement (Reg 4)",
+      "Indian collaborator → Form 1 (prior intimation)",
+      "Exempt: collaborative research, non-commercial"
+    ],
+    "expected_citations": [
+      "Biological Diversity Rules 2024, Form 2",
+      "Biological Diversity Rules 2024, Reg 4",
+      "Biological Diversity Rules 2024, Form 1",
+      "BD Amendment Act 2023, Sec 6"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "abs_compliance"
+  },
+  {
+    "id": 5,
+    "query_hi": "हल्दी का US में पेटेंट Sec 3(p) के तहत?",
+    "query_en": "Turmeric patent US Sec 3(p)?",
+    "expected_key_points": [
+      "ABSTAIN - Sec 3(p) is INDIA ONLY provision",
+      "US governed by 35 USC 101 (subject matter eligibility)",
+      "USPTO examines novelty/non-obviousness differently",
+      "Jurisdiction correction is the answer",
+      "No Indian law applies to US patent"
+    ],
+    "expected_citations": [
+      "Patents Act, Sec 3(p) [jurisdiction: India]",
+      "35 USC 101 [jurisdiction: US]"
+    ],
+    "tab": "International",
+    "jurisdiction": "Both",
+    "category": "jurisdiction_correction"
+  },
+  {
+    "id": 6,
+    "query_hi": "ब्राह्मी के लिए पेटेंट क्लेम ड्राफ्ट करें",
+    "query_en": "Draft patent claim for Brahmi",
+    "expected_key_points": [
+      "ABSTAIN - legal advice, cannot draft claims",
+      "Provide template structure only",
+      "Suggest patent attorney consultation",
+      "Mention Sec 3(p) risk for classical herbs",
+      "Independent claim + dependent claims template"
+    ],
+    "expected_citations": [
+      "Patents Act, Sec 3(p)",
+      "Patents Act, Sec 10 (specification)",
+      "Disclaimer: not legal advice"
+    ],
+    "tab": "Both",
+    "jurisdiction": "Both",
+    "category": "legal_advice_abstain"
+  },
+  {
+    "id": 7,
+    "query_hi": "आयुर्वेद आहार और दवा में क्या अंतर है?",
+    "query_en": "Ayurveda Aahar vs drug difference",
+    "expected_key_points": [
+      "Aahar = FOOD category (FSSAI 2022 Regs)",
+      "Drug = MEDICINE category (D&C Act 1940 + CDSCO)",
+      "Aahar: NO patent, only TM + GI possible",
+      "Drug: patent possible if novel + inventive",
+      "Labeling, licensing, claims completely different"
+    ],
+    "expected_citations": [
+      "FSSAI Ayurveda Aahar Regulations 2022, Reg 5",
+      "Drugs & Cosmetics Act 1940, Sec 7A",
+      "FSSAI Act 2006",
+      "Schedule T GMP"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "aahar_vs_drug"
+  },
+  {
+    "id": 8,
+    "query_hi": "हर्बल दावों वाला कॉस्मेटिक रेगुलेशन",
+    "query_en": "Cosmetic with herbal claims",
+    "expected_key_points": [
+      "If THERAPEUTIC claims → drug license (CDSCO)",
+      "If COSMETIC claims only → D&C Act cosmetic schedule",
+      "Herbal ingredient ≠ herbal claim",
+      "Ayush license needed for 'Ayurvedic' label",
+      "Advertisement: Drugs & Magic Remedies Act 1954"
+    ],
+    "expected_citations": [
+      "Drugs & Cosmetics Act 1940, Sec 3(aaa)",
+      "D&C Act Cosmetic Schedule",
+      "Drugs & Magic Remedies Act 1954",
+      "AYUSH License guidelines"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "cosmetic_vs_drug"
+  },
+  {
+    "id": 9,
+    "query_hi": "दार्जिलिंग चाय प्रक्रिया के लिए GI",
+    "query_en": "GI for Darjeeling tea process",
+    "expected_key_points": [
+      "GI Act 1999, not patent",
+      "Collective rights (association of producers)",
+      "Geographical origin + quality/reputation link",
+      "No individual ownership",
+      "International: Lisbon Agreement, Madrid System"
+    ],
+    "expected_citations": [
+      "Geographical Indications Act 1999, Sec 2(e)",
+      "Lisbon Agreement",
+      "TRIPS Art 22-24"
+    ],
+    "tab": "India",
+    "jurisdiction": "Both",
+    "category": "gi_protection"
+  },
+  {
+    "id": 10,
+    "query_hi": "आयुष फॉर्मूलेशन के लिए PCT फाइलिंग",
+    "query_en": "PCT filing for Ayush formulation",
+    "expected_key_points": [
+      "PCT Art 4 - international application",
+      "GRATK Art 3 disclosure if bio-resource used",
+      "30/31 month national phase entry",
+      "India as ISA/IPEA available",
+      "Priority claim from Indian provisional"
+    ],
+    "expected_citations": [
+      "PCT, Art 4",
+      "PCT, Art 22 (30 month)",
+      "PCT, Art 39 (31 month)",
+      "GRATK Treaty 2024, Art 3",
+      "Patents Rules 2024, Rule 20"
+    ],
+    "tab": "International",
+    "jurisdiction": "International",
+    "category": "pct_filing"
+  },
+  {
+    "id": 11,
+    "query_hi": "फाइटोफार्मास्यूटिकल NDCT क्लिनिकल ट्रायल",
+    "query_en": "Phytopharma NDCT clinical trial",
+    "expected_key_points": [
+      "CDSCO phytopharma pathway (2017 guideline + NDCT 2019)",
+      "Standardized extract + marker compounds mandatory",
+      "Phase I: safety (healthy volunteers)",
+      "Phase II: efficacy (target condition)",
+      "Phase III: confirmatory (multi-center)",
+      "Accelerated approval possible for unmet need"
+    ],
+    "expected_citations": [
+      "NDCT Rules 2019, Rule 122E",
+      "CDSCO Phytopharmaceutical Guideline 2017",
+      "Drugs & Cosmetics Act 1940, Sec 7A",
+      "Schedule Y (replaced by NDCT)"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "phytopharma_trials"
+  },
+  {
+    "id": 12,
+    "query_hi": "आयुर्वेद दवा के लिए ट्रेडमार्क विरोध",
+    "query_en": "TM opposition for Ayurvedic medicine",
+    "expected_key_points": [
+      "TM Act 1999, Sec 21 - opposition period 4 months",
+      "Grounds: Sec 9 (descriptive), Sec 11 (similarity)",
+      "Classical names (Chyavanprash) → Sec 9 absolute refusal",
+      "Evidence of prior use + distinctiveness",
+      "GI registration blocks TM for same name"
+    ],
+    "expected_citations": [
+      "Trade Marks Act 1999, Sec 9",
+      "Trade Marks Act 1999, Sec 11",
+      "Trade Marks Act 1999, Sec 21",
+      "GI Act 1999, Sec 22"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "tm_opposition"
+  },
+  {
+    "id": 13,
+    "query_hi": "बहुभाषी Bhashini में IP सलाह",
+    "query_en": "Multilingual IP advice via Bhashini",
+    "expected_key_points": [
+      "Bhashini ULCA T2T: retrieve EN corpus, answer HI, cite EN source",
+      "Legal terminology: use IndicTrans2 legal fine-tune",
+      "Voice: Dhwani TTS for Hindi/Tamil/Telugu/Bengali",
+      "ASR: Dhwani for voice queries",
+      "Citation preservation across translation"
+    ],
+    "expected_citations": [
+      "Bhashini ULCA API docs",
+      "IndicTrans2 legal benchmarks",
+      "Dhwani ASR/TTS paper"
+    ],
+    "tab": "Both",
+    "jurisdiction": "Both",
+    "category": "bhashini_multilingual"
+  },
+  {
+    "id": 14,
+    "query_hi": "पारंपरिक ज्ञान डिजिटल लाइब्रेरी एक्सेस",
+    "query_en": "TKDL access for patent search",
+    "expected_key_points": [
+      "TKDL NOT publicly accessible - CSIR/NIScPR MoU required",
+      "For SIH: use API + IMPPAT as proxy",
+      "TKDL cited as 'TKDL record' in patent office actions",
+      "ABSTAIN on specific TKDL record numbers",
+      "Public alternative: WIPO TK database, Google Patents TK"
+    ],
+    "expected_citations": [
+      "TKDL official policy (CSIR)",
+      "API database (db.imppat.org)",
+      "IMPPAT 2.0 publication"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "tkdl_access"
+  },
+  {
+    "id": 15,
+    "query_hi": "पौधा किस्म संरक्षण बनाम पेटेंट",
+    "query_en": "Plant variety protection vs patent",
+    "expected_key_points": [
+      "PPVFR Act 2001 - plant varieties (not patents)",
+      "Farmer's rights + breeder's rights",
+      "DUS test (Distinctness, Uniformity, Stability)",
+      "Patent (Sec 3(j)) excludes plants/animals",
+      "Both can coexist for same variety"
+    ],
+    "expected_citations": [
+      "PPVFR Act 2001, Sec 15",
+      "Patents Act, Sec 3(j)",
+      "UPOV 1991 Convention"
+    ],
+    "tab": "India",
+    "jurisdiction": "Both",
+    "category": "pvpf_vs_patent"
+  },
+  {
+    "id": 16,
+    "query_hi": "अंतर्राष्ट्रीय जैव विविधता समझौते",
+    "query_en": "International biodiversity treaties",
+    "expected_key_points": [
+      "CBD 1992 - Art 15 (access), Art 8(j) (TK)",
+      "Nagoya Protocol 2010 - ABS implementation",
+      "GRATK 2024 - patent disclosure of origin",
+      "ITPGRFA 2001 - food/agriculture PGRFA",
+      "India: BD Act 2002 + Amendment 2023 + Rules 2024"
+    ],
+    "expected_citations": [
+      "CBD, Art 15",
+      "CBD, Art 8(j)",
+      "Nagoya Protocol, Art 5",
+      "GRATK Treaty 2024, Art 3",
+      "ITPGRFA, Art 12"
+    ],
+    "tab": "International",
+    "jurisdiction": "International",
+    "category": "treaties"
+  },
+  {
+    "id": 17,
+    "query_hi": "पारंपरिक ज्ञान पूर्वकल्पना साक्ष्य",
+    "query_en": "Traditional knowledge prior art evidence",
+    "expected_key_points": [
+      "TKDL = defensive prior art (patent office use only)",
+      "API monographs = published prior art",
+      "Published texts (Charaka, Sushruta) = prior art",
+      "Oral TK = not prior art unless documented",
+      "Sec 3(p) + Sec 2(1)(j) combined analysis"
+    ],
+    "expected_citations": [
+      "Patents Act, Sec 3(p)",
+      "Patents Act, Sec 2(1)(j)",
+      "Ayurvedic Pharmacopoeia of India",
+      "TKDL defensive publication policy"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "prior_art"
+  },
+  {
+    "id": 18,
+    "query_hi": "आयुष निर्यात के लिए नियामक अनुपालन",
+    "query_en": "Ayush export regulatory compliance",
+    "expected_key_points": [
+      "Importing country regulations (US FDA, EU EMA, etc.)",
+      "Certificate of Pharmaceutical Product (CoPP)",
+      "GMP certification (WHO-GMP / Schedule T)",
+      "GRATK disclosure if genetic resource",
+      "ABS compliance (BD Rules 2024)",
+      "Labeling: local language requirements"
+    ],
+    "expected_citations": [
+      "WHO-GMP guidelines",
+      "Schedule T GMP",
+      "GRATK Treaty 2024, Art 3",
+      "Biological Diversity Rules 2024, Form 2",
+      "Importing country regulations"
+    ],
+    "tab": "International",
+    "jurisdiction": "International",
+    "category": "export_compliance"
+  },
+  {
+    "id": 19,
+    "query_hi": "पेटेंट योग्यता: नई प्रक्रिया बनाम पुराना उत्पाद",
+    "query_en": "Patentability: new process vs old product",
+    "expected_key_points": [
+      "Sec 3(p) bars product of traditional knowledge",
+      "NEW process for known herb MAY be patentable",
+      "Process claims: Sec 2(1)(j) - novelty + inventive step",
+      "Product-by-process claims risky (Sec 3(p) overlap)",
+      "Example: novel extraction method for ashwagandha"
+    ],
+    "expected_citations": [
+      "Patents Act, Sec 3(p)",
+      "Patents Act, Sec 2(1)(j)",
+      "Patents Act, Sec 3(e) (mere admixture)",
+      "Patents Act, Sec 3(i) (method of treatment)"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "process_patent"
+  },
+  {
+    "id": 20,
+    "query_hi": "डिजाइन पेटेंट बनाम ट्रेड ड्रेस आयुर्वेद पैकेजिंग",
+    "query_en": "Design patent vs trade dress Ayurvedic packaging",
+    "expected_key_points": [
+      "Designs Act 2000 - visual appearance (shape, pattern)",
+      "Trade dress - overall look/feel (unregistered TM)",
+      "Packaging: Design patent (10+5 years) + TM (indefinite)",
+      "Functional features NOT protectable by design",
+      "Color combination = trade dress (Louboutin precedent)"
+    ],
+    "expected_citations": [
+      "Designs Act 2000, Sec 2(d)",
+      "Trade Marks Act 1999, Sec 2(zb)",
+      "Designs Act 2000, Sec 11 (term)"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "design_trade_dress"
+  },
+  {
+    "id": 21,
+    "query_hi": "तुलसी अर्क के लिए पेटेंट में Sec 3(e) कैसे लागू होता है?",
+    "query_en": "How does Sec 3(e) apply to Tulsi extract patent?",
+    "expected_key_points": [
+      "Sec 3(e) mere admixture bar",
+      "Novel synergistic effect needed",
+      "Standardized extract vs classical",
+      "IMPPAT marker data",
+      "Prior art API"
+    ],
+    "expected_citations": [
+      "Patents Act, Sec 3(e)",
+      "Patents Act, Sec 2(1)(j)",
+      "Ayurvedic Pharmacopoeia of India"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "sec3e_admixture"
+  },
+  {
+    "id": 22,
+    "query_hi": "आयुर्वेदिक सर्जिकल प्रक्रिया पेटेंट Sec 3(i) के तहत?",
+    "query_en": "Ayurvedic surgical procedure patent under Sec 3(i)?",
+    "expected_key_points": [
+      "Sec 3(i) bars method of treatment",
+      "Process for manufacturing product MAY be ok",
+      "Diagnostic method excluded",
+      "Therapeutic method excluded"
+    ],
+    "expected_citations": [
+      "Patents Act, Sec 3(i)",
+      "Patents Act, Sec 3(p)"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "sec3i_treatment"
+  },
+  {
+    "id": 23,
+    "query_hi": "नई तुलसी किस्म के लिए PPVFR बनाम पेटेंट?",
+    "query_en": "New Tulsi variety PPVFR vs patent",
+    "expected_key_points": [
+      "Sec 3(j) excludes plants",
+      "PPVFR Act 2001 applies",
+      "DUS test required",
+      "Farmer rights",
+      "Breeder rights"
+    ],
+    "expected_citations": [
+      "Patents Act, Sec 3(j)",
+      "PPVFR Act 2001, Sec 15",
+      "UPOV 1991"
+    ],
+    "tab": "Both",
+    "jurisdiction": "Both",
+    "category": "sec3j_plants"
+  },
+  {
+    "id": 24,
+    "query_hi": "एल्गोरिदम द्वारा आयुर्वेद निदान Sec 3(k) में?",
+    "query_en": "Algorithmic Ayurveda diagnosis under Sec 3(k)?",
+    "expected_key_points": [
+      "Sec 3(k) bars mathematical/business/algorithm per se",
+      "Technical application MAY be patentable",
+      "Computer-related invention guidelines 2017"
+    ],
+    "expected_citations": [
+      "Patents Act, Sec 3(k)",
+      "CRI Guidelines 2017"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "sec3k_algorithm"
+  },
+  {
+    "id": 25,
+    "query_hi": "पेटेंट स्पेसिफिकेशन Sec 10 के तहत क्या लिखें?",
+    "query_en": "What to write in patent specification Sec 10?",
+    "expected_key_points": [
+      "Sec 10 provisional vs complete",
+      "Best mode disclosure",
+      "GRATK disclosure if bio-resource",
+      "Enablement requirement"
+    ],
+    "expected_citations": [
+      "Patents Act, Sec 10",
+      "GRATK Treaty 2024, Art 3"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "specification"
+  },
+  {
+    "id": 26,
+    "query_hi": "पेटेंट विरोध Sec 25(1)(k) TK के आधार पर",
+    "query_en": "Patent opposition under Sec 25(1)(k) for TK",
+    "expected_key_points": [
+      "Pre-grant opposition Sec 25(1)",
+      "Ground (k) anticipation by TK",
+      "TKDL as evidence",
+      "Post-grant Sec 25(2)"
+    ],
+    "expected_citations": [
+      "Patents Act, Sec 25(1)(k)",
+      "Patents Act, Sec 3(p)"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "opposition_tk"
+  },
+  {
+    "id": 27,
+    "query_hi": "आयुर्वेद ट्रेडमार्क Sec 9 वर्णनात्मक रोक",
+    "query_en": "Ayurveda trademark Sec 9 descriptiveness bar",
+    "expected_key_points": [
+      "Sec 9 absolute grounds",
+      "Classical name = descriptive",
+      "Distinctiveness via use",
+      "Acquired distinctiveness"
+    ],
+    "expected_citations": [
+      "Trade Marks Act 1999, Sec 9",
+      "Trade Marks Act 1999, Sec 11"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "tm_sec9"
+  },
+  {
+    "id": 28,
+    "query_hi": "कॉपीराइट बनाम पेटेंट आयुर्वेद पुस्तक के लिए",
+    "query_en": "Copyright vs patent for Ayurvedic book",
+    "expected_key_points": [
+      "Copyright Sec 13 protects expression",
+      "Patent protects invention",
+      "Book content = copyright",
+      "Formulation = may be patent (if new)"
+    ],
+    "expected_citations": [
+      "Copyright Act 1957, Sec 13",
+      "Patents Act, Sec 3(p)"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "copyright_vs_patent"
+  },
+  {
+    "id": 29,
+    "query_hi": "डिजाइन पेटेंट पैकेजिंग 10 साल बाद?",
+    "query_en": "Design patent packaging after 10 years",
+    "expected_key_points": [
+      "Designs Sec 11 term 10+5",
+      "Extension on payment",
+      "Trade dress continues via TM",
+      "Functional exclusion"
+    ],
+    "expected_citations": [
+      "Designs Act 2000, Sec 11",
+      "Designs Act 2000, Sec 2(d)"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "design_term"
+  },
+  {
+    "id": 30,
+    "query_hi": "ABS Form 1 बनाम Form 2 कब?",
+    "query_en": "When Form 1 vs Form 2 for ABS",
+    "expected_key_points": [
+      "Indian entity Form 1 intimation",
+      "Foreign entity Form 2 prior approval",
+      "Sec 6 vs Sec 3",
+      "Reg 4 benefit sharing"
+    ],
+    "expected_citations": [
+      "Biological Diversity Rules 2024, Form 1",
+      "Biological Diversity Rules 2024, Form 2",
+      "Biological Diversity Rules 2024, Reg 4"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "form1_vs_form2"
+  },
+  {
+    "id": 31,
+    "query_hi": "अमेरिका में आयुर्वेद पेटेंट 35 USC 101",
+    "query_en": "Ayurveda patent in US under 35 USC 101",
+    "expected_key_points": [
+      "US 35 USC 101 eligibility",
+      "Mayo/Alice framework",
+      "Natural product doctrine",
+      "Sec 3(p) India only"
+    ],
+    "expected_citations": [
+      "35 USC 101",
+      "Patents Act, Sec 3(p) [India only]"
+    ],
+    "tab": "International",
+    "jurisdiction": "Both",
+    "category": "us_101"
+  },
+  {
+    "id": 32,
+    "query_hi": "EU में आयुर्वेद हर्बल THMPD के तहत",
+    "query_en": "Ayurveda herbal under EU THMPD",
+    "expected_key_points": [
+      "Directive 2004/24/EC traditional use",
+      "30 years use (15 EU)",
+      "CTD dossier",
+      "EMA monograph"
+    ],
+    "expected_citations": [
+      "EMA Herbal Directive 2004/24/EC",
+      "GRATK Treaty 2024, Art 3"
+    ],
+    "tab": "International",
+    "jurisdiction": "International",
+    "category": "eu_thmpd"
+  },
+  {
+    "id": 33,
+    "query_hi": "पेटेंट प्रकाशन Sec 11A 18 महीने",
+    "query_en": "Patent publication Sec 11A 18 months",
+    "expected_key_points": [
+      "Sec 11A publication 18 months",
+      "Early publication request",
+      "No rights until publication"
+    ],
+    "expected_citations": [
+      "Patents Act, Sec 11A"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "publication"
+  },
+  {
+    "id": 34,
+    "query_hi": "जैव विविधता नियम 2024 Rule 12 क्या?",
+    "query_en": "What is BD Rules 2024 Rule 12",
+    "expected_key_points": [
+      "Rule 12 prior intimation procedure",
+      "Form 1 details",
+      "NBA acknowledgement"
+    ],
+    "expected_citations": [
+      "Biological Diversity Rules 2024, Rule 12",
+      "Biological Diversity Rules 2024, Form 1"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "bd_rule12"
+  },
+  {
+    "id": 35,
+    "query_hi": "FSSAI आहार Reg 12 लेबलिंग",
+    "query_en": "FSSAI Aahar Reg 12 labeling",
+    "expected_key_points": [
+      "Reg 12 labeling for Ayurveda Aahar",
+      "Ayurvedic proprietary food",
+      "No medicinal claims",
+      "FSSAI logo + license"
+    ],
+    "expected_citations": [
+      "FSSAI Ayurveda Aahar Regulations 2022, Reg 12",
+      "FSSAI Ayurveda Aahar Regulations 2022, Reg 5"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "fssai_labeling"
+  },
+  {
+    "id": 36,
+    "query_hi": "NDCT Rule 21 क्लिनिकल ट्रायल अनुमति",
+    "query_en": "NDCT Rule 21 clinical trial permission",
+    "expected_key_points": [
+      "Rule 21 CT permission",
+      "CTRI registration mandatory",
+      "Ethics committee",
+      "DCGI approval"
+    ],
+    "expected_citations": [
+      "NDCT Rules 2019, Rule 21",
+      "NDCT Rules 2019, Rule 122E"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "ndct_rule21"
+  },
+  {
+    "id": 37,
+    "query_hi": "GI उल्लंघन Sec 22 उपाय",
+    "query_en": "GI infringement Sec 22 remedy",
+    "expected_key_points": [
+      "GI Sec 22 infringement",
+      "Civil remedy",
+      "Criminal Sec 39",
+      "Collective action"
+    ],
+    "expected_citations": [
+      "Geographical Indications Act 1999, Sec 11",
+      "Geographical Indications Act 1999, Sec 22"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "gi_infringement"
+  },
+  {
+    "id": 38,
+    "query_hi": "PCT राष्ट्रीय चरण 31 महीने Art 39",
+    "query_en": "PCT national phase 31 months Art 39",
+    "expected_key_points": [
+      "Art 22 30 months",
+      "Art 39 31 months with IPEA",
+      "India ISA",
+      "Priority 12 months Paris"
+    ],
+    "expected_citations": [
+      "PCT, Art 39",
+      "Patent Cooperation Treaty, Article 22"
+    ],
+    "tab": "International",
+    "jurisdiction": "International",
+    "category": "pct_31months"
+  },
+  {
+    "id": 39,
+    "query_hi": "ITPGRFA बनाम CBD बीज साझा करना",
+    "query_en": "ITPGRFA vs CBD seed sharing",
+    "expected_key_points": [
+      "ITPGRFA multilateral for food crops",
+      "CBD bilateral",
+      "SMTA vs ABS",
+      "Annex 1 crops"
+    ],
+    "expected_citations": [
+      "CBD, Art 15",
+      "ITPGRFA, Art 12"
+    ],
+    "tab": "International",
+    "jurisdiction": "International",
+    "category": "itpgrfa_vs_cbd"
+  },
+  {
+    "id": 40,
+    "query_hi": "Schedule T GMP आयुर्वेद निर्माण",
+    "query_en": "Schedule T GMP for Ayurveda manufacturing",
+    "expected_key_points": [
+      "Schedule T GMP for Ayurveda",
+      "WHO-GMP additional for export",
+      "AYUSH license",
+      "CoPP"
+    ],
+    "expected_citations": [
+      "Schedule T, GMP",
+      "WHO-GMP guidelines"
+    ],
+    "tab": "India",
+    "jurisdiction": "India",
+    "category": "schedule_t"
+  }
+]

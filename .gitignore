@@ -29,9 +29,15 @@ qdrant_storage/
 chroma_db/
 neo4j_data/
 
-# Bhashini creds
+# API keys (NEVER commit)
+*.json
+!data/sample/.gitkeep
+!README.md
+
+# Bhashini creds (legacy)
 bhashini_keys.json
 ulca_keys.json
+sarvam_keys.json
 
 # OS
 .DS_Store

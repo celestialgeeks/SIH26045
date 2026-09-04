@@ -1,4 +1,4 @@
-# SIH26045 IP-SAKTI Sahayak — RAG + Neo4j + Bhashini
+# SIH26045 IP-SAKTI Sahayak — RAG + Neo4j + Sarvam AI
 fastapi
 uvicorn
 qdrant-client
@@ -16,3 +16,4 @@ python-multipart
 pydantic
 python-dotenv
 pytest
+sarvamai>=0.1

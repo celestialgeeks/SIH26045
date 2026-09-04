@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SIH 2026 — Top 20 PS & Winning Combos | IPS Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  @page { size: 13.33in 7.5in; margin: 0; }
+  :root{
+    --purple:#533afd; --purple-hover:#4434d4; --purple-light:#f3f1ff; --purple-mid:#e8e5ff; --purple-border:#d6d9fc;
+    --navy:#061b31; --navy-2:#0d253d; --slate:#64748d; --slate-dark:#273951;
+    --border:#e5edf5; --border2:#edf2f7; --bg:#ffffff; --bg2:#f6f9fc; --green:#0e9b4a; --green-bg:#e6f7ec; --green-brd:#b7e5c6;
+    --amber:#b7791f; --amber-bg:#fef3c7; --amber-brd:#f5d78a;
+    --red:#d61f3a; --red-bg:#fde8ec; --red-brd:#f5b5bf;
+    --ruby:#ea2261; --magenta:#f96bee;
+    --shadow: rgba(50,50,93,0.12) 0px 18px 36px -18px, rgba(0,0,0,0.08) 0px 8px 16px -8px;
+    --shadow-lg: rgba(50,50,93,0.18) 0px 30px 45px -30px, rgba(0,0,0,0.1) 0px 18px 36px -18px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#eef2f7}
+  body{font-family:'Source Sans 3', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--navy); -webkit-font-smoothing:antialiased;}
+  .slide{width:13.33in; height:7.5in; background:var(--bg); position:relative; overflow:hidden; page-break-after:always; padding:0; display:flex; flex-direction:column;}
+  .slide:last-child{page-break-after:auto}
+  /* header */
+  .topbar{height:0.52in; display:flex; align-items:center; justify-content:space-between; padding:0 0.55in; border-bottom:1px solid var(--border2); background:#fff; flex-shrink:0;}
+  .brand{font-size:9px; font-weight:700; letter-spacing:0.14em; color:var(--purple); font-family:'Source Code Pro', monospace;}
+  .brand span{color:var(--navy); font-weight:600}
+  .topmeta{font-size:8.5px; color:var(--slate); letter-spacing:0.06em; font-family:'Source Code Pro', monospace;}
+  .pagenum{position:absolute; bottom:0.22in; right:0.55in; font-size:7.5px; font-family:'Source Code Pro', monospace; color:#a0aec0; letter-spacing:0.08em;}
+  .watermark{position:absolute; bottom:0.22in; left:0.55in; font-size:7px; font-family:'Source Code Pro', monospace; color:#cbd5e0; letter-spacing:0.06em;}
+
+  /* HERO */
+  .hero{display:flex; flex:1; padding:0.45in 0.55in 0.3in 0.55in; gap:0.45in; align-items:stretch;}
+  .hero-left{flex:1.15; display:flex; flex-direction:column; justify-content:center;}
+  .kicker{display:inline-flex; align-items:center; gap:8px; margin-bottom:14px;}
+  .kicker-badge{background:var(--navy); color:#fff; font-size:7.5px; font-weight:700; letter-spacing:0.12em; padding:5px 9px; border-radius:999px; font-family:'Source Code Pro', monospace;}
+  .kicker-text{font-size:8.5px; color:var(--slate); font-family:'Source Code Pro', monospace; letter-spacing:0.06em;}
+  .h1{font-size:44px; font-weight:300; line-height:0.95; letter-spacing:-1.2px; color:var(--navy); margin:0; font-feature-settings:"ss01";}
+  .h1 b{font-weight:600; color:var(--purple);}
+  .h1 em{font-style:normal; background:linear-gradient(90deg, var(--purple) 0%, var(--ruby) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; font-weight:300;}
+  .sub{margin-top:14px; font-size:13.5px; line-height:1.45; color:var(--slate); font-weight:300; max-width:6.2in;}
+  .sub strong{color:var(--navy); font-weight:600;}
+  .hero-stats{display:flex; gap:12px; margin-top:18px;}
+  .hstat{background:#fff; border:1px solid var(--border); border-radius:10px; padding:10px 14px; min-width:1.38in; box-shadow:var(--shadow);}
+  .hstat-num{font-size:22px; font-weight:700; letter-spacing:-0.6px; color:var(--navy); line-height:1;}
+  .hstat-num small{font-size:11px; font-weight:600; color:var(--purple);}
+  .hstat-label{font-size:7.5px; letter-spacing:0.1em; color:var(--slate); font-family:'Source Code Pro', monospace; margin-top:4px; text-transform:uppercase;}
+  .hstat-sub{font-size:8px; color:#94a3b8; margin-top:2px;}
+  .hero-right{flex:0.85; display:flex; flex-direction:column; gap:12px; justify-content:center;}
+  .mini-card{background:var(--navy); color:#fff; border-radius:14px; padding:18px 18px 14px 18px; position:relative; overflow:hidden; box-shadow:var(--shadow-lg);}
+  .mini-card::after{content:""; position:absolute; top:-40px; right:-40px; width:140px; height:140px; background:radial-gradient(circle at 30% 30%, rgba(83,58,253,0.7), transparent 70%); opacity:0.9;}
+  .mini-card h3{margin:0; font-size:10px; letter-spacing:0.14em; font-family:'Source Code Pro', monospace; color:#a5b4fc; font-weight:600;}
+  .mini-card p{margin:8px 0 0 0; font-size:13px; line-height:1.4; font-weight:300; color:#e2e8f0;}
+  .mini-card p b{color:#fff; font-weight:600;}
+  .legend{display:flex; gap:8px; flex-wrap:wrap; margin-top:4px;}
+  .legend span{font-size:7.5px; font-family:'Source Code Pro', monospace; padding:4px 8px; border-radius:999px; background:var(--purple-light); color:var(--purple); border:1px solid var(--purple-border); font-weight:600; letter-spacing:0.04em;}
+  .legend span.alt{background:var(--bg2); color:var(--slate); border-color:var(--border);}
+
+  /* shared */
+  .eyebrow{font-size:7.5px; font-family:'Source Code Pro', monospace; letter-spacing:0.16em; color:var(--purple); font-weight:700; margin-bottom:6px;}
+  .h2{font-size:26px; font-weight:300; letter-spacing:-0.6px; color:var(--navy); margin:0; line-height:1.05;}
+  .h2 b{font-weight:600;}
+  .h2-desc{font-size:9.5px; color:var(--slate); margin-top:6px; line-height:1.5; max-width:7in;}
+  .divider{height:1px; background:var(--border); margin:10px 0 12px 0;}
+
+  /* Slide 2 methodology */
+  .method-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-top:6px;}
+  .mcard{background:#fff; border:1px solid var(--border); border-radius:12px; padding:14px 14px 12px 14px; box-shadow:var(--shadow); position:relative; overflow:hidden;}
+  .mcard::before{content:""; position:absolute; top:0; left:0; right:0; height:3px; background:var(--purple);}
+  .mcard.green::before{background:var(--green);}
+  .mcard.navy::before{background:var(--navy);}
+  .mcard h4{margin:0; font-size:9px; letter-spacing:0.12em; font-family:'Source Code Pro', monospace; color:var(--slate); text-transform:uppercase;}
+  .mcard h3{margin:6px 0 6px 0; font-size:13px; font-weight:600; color:var(--navy); letter-spacing:-0.2px;}
+  .mcard p{margin:0; font-size:8.7px; color:var(--slate); line-height:1.5;}
+  .formula{background:var(--bg2); border:1px solid var(--border); border-radius:8px; padding:8px 10px; margin-top:8px; font-family:'JetBrains Mono', monospace; font-size:7.8px; color:var(--navy); line-height:1.5;}
+  .formula b{color:var(--purple);}
+  .pillrow{display:flex; gap:6px; flex-wrap:wrap; margin-top:8px;}
+  .pill{font-size:7px; font-family:'Source Code Pro', monospace; padding:4px 7px; border-radius:999px; background:#fff; border:1px solid var(--border); color:var(--slate-dark); font-weight:600; letter-spacing:0.04em;}
+  .pill.purple{background:var(--purple-light); border-color:var(--purple-border); color:var(--purple);}
+  .pill.green{background:var(--green-bg); border-color:var(--green-brd); color:var(--green);}
+  .note{margin-top:10px; display:flex; gap:10px; align-items:center; background:linear-gradient(90deg, #fff 0%, #f3f1ff 100%); border:1px solid var(--purple-border); border-radius:10px; padding:9px 12px;}
+  .note-icon{width:26px; height:26px; border-radius:999px; background:var(--purple); color:#fff; display:flex; align-items:center; justify-content:center; font-size:12px; flex-shrink:0;}
+  .note p{margin:0; font-size:8.2px; color:var(--slate); line-height:1.45;}
+  .note b{color:var(--navy);}
+
+  /* table */
+  .table-wrap{background:#fff; border:1px solid var(--border); border-radius:12px; overflow:hidden; box-shadow:var(--shadow); margin-top:8px;}
+  table{width:100%; border-collapse:collapse;}
+  thead th{background:var(--navy); color:#cbd5e0; font-size:6.8px; font-family:'Source Code Pro', monospace; letter-spacing:0.12em; text-transform:uppercase; padding:8px 6px; text-align:left; font-weight:600;}
+  thead th:first-child{padding-left:10px;}
+  tbody td{padding:5.5px 6px; font-size:7.9px; line-height:1.35; border-bottom:1px solid #f1f5f9; vertical-align:middle;}
+  tbody td:first-child{padding-left:10px;}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:nth-child(even){background:#f8fafc;}
+  .rank{width:22px; height:22px; border-radius:999px; display:flex; align-items:center; justify-content:center; font-size:8.5px; font-weight:700; color:#fff; flex-shrink:0;}
+  .rank-1{background:linear-gradient(135deg, #533afd, #7c3aed);}
+  .rank-2{background:var(--navy);}
+  .rank-3{background:#475569;}
+  .rank-oth{background:#e2e8f0; color:var(--navy);}
+  .psid{font-family:'Source Code Pro', monospace; font-weight:700; color:var(--navy); font-size:7.8px; letter-spacing:0.02em;}
+  .org{color:var(--slate); font-size:7.4px; line-height:1.2;}
+  .theme{font-size:7px; font-family:'Source Code Pro', monospace; padding:3px 6px; border-radius:999px; background:var(--bg2); border:1px solid var(--border); color:var(--slate-dark); white-space:nowrap; font-weight:600;}
+  .theme.med{background:#eef2ff; border-color:#c7d2fe; color:#3730a3;}
+  .theme.agri{background:#ecfdf5; border-color:#a7f3d0; color:#065f46;}
+  .theme.auto{background:#fff7ed; border-color:#fed7aa; color:#7c2d12;}
+  .theme.block{background:#fdf2f8; border-color:#fbcfe8; color:#831843;}
+  .theme.misc{background:#f8fafc; border-color:var(--border); color:var(--slate);}
+  .wps{font-weight:700; color:var(--navy); font-size:8.5px;}
+  .wps-bar{height:4px; border-radius:999px; background:#e2e8f0; overflow:hidden; margin-top:3px; width:56px;}
+  .wps-fill{height:100%; border-radius:999px;}
+  .cls-badge{font-size:6.8px; font-family:'Source Code Pro', monospace; font-weight:700; padding:3px 6px; border-radius:999px; border:1px solid; letter-spacing:0.03em;}
+  .cls-low{background:var(--green-bg); color:var(--green); border-color:var(--green-brd);}
+  .cls-med{background:var(--amber-bg); color:var(--amber); border-color:var(--amber-brd);}
+  .cls-high{background:var(--red-bg); color:var(--red); border-color:var(--red-brd);}
+  .verdict{font-size:6.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:3px 6px; border-radius:999px; background:var(--navy); color:#fff;}
+  .verdict.risk{background:#fff; color:var(--slate); border:1px solid var(--border);}
+
+  /* combos */
+  .combo-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-top:10px;}
+  .combo{background:#fff; border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column;}
+  .combo-top{padding:12px 14px 10px 14px; flex:1;}
+  .combo-num{font-family:'Source Code Pro', monospace; font-size:7px; letter-spacing:0.14em; color:var(--purple); font-weight:700;}
+  .combo h3{margin:6px 0 4px 0; font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.2; letter-spacing:-0.2px;}
+  .combo h3 span{color:var(--slate); font-weight:400;}
+  .combo p{margin:0; font-size:7.9px; color:var(--slate); line-height:1.5;}
+  .combo-tags{display:flex; gap:5px; flex-wrap:wrap; margin-top:8px;}
+  .tag{font-size:6.5px; font-family:'Source Code Pro', monospace; padding:3px 6px; border-radius:999px; font-weight:600; letter-spacing:0.04em; border:1px solid;}
+  .tag.purple{background:var(--purple-light); color:var(--purple); border-color:var(--purple-border);}
+  .tag.green{background:var(--green-bg); color:var(--green); border-color:var(--green-brd);}
+  .tag.navy{background:var(--navy); color:#fff; border-color:var(--navy);}
+  .tag.gray{background:var(--bg2); color:var(--slate); border-color:var(--border);}
+  .combo-meta{margin-top:10px; display:grid; grid-template-columns:1fr 1fr; gap:8px; background:var(--bg2); border-radius:8px; padding:8px 9px; border:1px solid var(--border);}
+  .meta-k{font-size:6.5px; font-family:'Source Code Pro', monospace; letter-spacing:0.1em; color:var(--slate); text-transform:uppercase; font-weight:600;}
+  .meta-v{font-size:9px; font-weight:700; color:var(--navy); margin-top:1px;}
+  .meta-v small{font-weight:500; color:var(--slate); font-size:7.5px;}
+  .combo-foot{padding:8px 14px; background:var(--bg2); border-top:1px solid var(--border); display:flex; align-items:center; justify-content:space-between;}
+  .foot-label{font-size:6.8px; font-family:'Source Code Pro', monospace; letter-spacing:0.08em; color:var(--slate); font-weight:600;}
+  .foot-val{font-size:7.5px; font-weight:700; color:var(--navy); font-family:'Source Code Pro', monospace;}
+  .combo.featured{border-color:var(--purple); box-shadow:var(--shadow-lg);}
+  .combo.featured .combo-foot{background:var(--purple); border-top-color:var(--purple);}
+  .combo.featured .foot-label{color:#c4b5fd;}
+  .combo.featured .foot-val{color:#fff;}
+
+  /* distribution */
+  .dist-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:14px; margin-top:10px; align-items:start;}
+  .dist-card{background:#fff; border:1px solid var(--border); border-radius:12px; padding:12px 14px; box-shadow:var(--shadow);}
+  .dist-card h4{margin:0; font-size:9px; font-family:'Source Code Pro', monospace; letter-spacing:0.12em; color:var(--slate); text-transform:uppercase;}
+  .bar-row{display:flex; align-items:center; gap:8px; margin-top:8px;}
+  .bar-label{width:1.65in; font-size:7.5px; color:var(--navy); font-weight:600; line-height:1.2;}
+  .bar-label small{color:var(--slate); font-weight:400; font-family:'Source Code Pro', monospace; font-size:6.5px;}
+  .bar-track{flex:1; height:14px; background:var(--bg2); border-radius:999px; overflow:hidden; border:1px solid var(--border); position:relative;}
+  .bar-fill{height:100%; border-radius:999px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px; font-size:6.5px; font-family:'Source Code Pro', monospace; font-weight:700; color:#fff;}
+  .donut-wrap{display:flex; align-items:center; gap:14px; margin-top:10px;}
+  .donut{width:1.55in; height:1.55in; border-radius:50%; flex-shrink:0; position:relative; background:conic-gradient(var(--purple) 0 30%, #0ea5e9 30% 55%, #10b981 55% 75%, #f59e0b 75% 88%, #e2e8f0 88% 100%);}
+  .donut::after{content:""; position:absolute; inset:22px; background:#fff; border-radius:50%; box-shadow:inset 0 0 0 1px var(--border);}
+  .donut-center{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:1;}
+  .donut-num{font-size:18px; font-weight:800; color:var(--navy); line-height:1;}
+  .donut-label{font-size:6.5px; font-family:'Source Code Pro', monospace; letter-spacing:0.1em; color:var(--slate); text-transform:uppercase; font-weight:700; margin-top:2px;}
+  .legend-grid{display:grid; grid-template-columns:1fr 1fr; gap:6px; flex:1;}
+  .leg{display:flex; align-items:center; gap:6px; font-size:7px; color:var(--slate); line-height:1.2;}
+  .leg i{width:8px; height:8px; border-radius:999px; flex-shrink:0; display:block;}
+
+  /* scatter */
+  .scatter-wrap{position:relative; height:3.1in; background:#fff; border:1px solid var(--border); border-radius:12px; overflow:hidden; box-shadow:var(--shadow); margin-top:8px; padding:14px 14px 28px 36px;}
+  .scatter-grid{position:absolute; inset:14px 14px 28px 36px; background-image: linear-gradient(to right, #f1f5f9 1px, transparent 1px), linear-gradient(to bottom, #f1f5f9 1px, transparent 1px); background-size:20% 25%;}
+  .axis-x{position:absolute; bottom:10px; left:36px; right:14px; display:flex; justify-content:space-between; font-size:6.5px; font-family:'Source Code Pro', monospace; color:var(--slate); font-weight:600;}
+  .axis-y{position:absolute; left:6px; top:14px; bottom:28px; display:flex; flex-direction:column; justify-content:space-between; font-size:6.5px; font-family:'Source Code Pro', monospace; color:var(--slate); font-weight:600; text-align:right; width:26px;}
+  .dot{position:absolute; width:11px; height:11px; border-radius:999px; border:2px solid #fff; box-shadow:0 2px 8px rgba(0,0,0,0.15); transform:translate(-50%,50%); display:flex; align-items:center; justify-content:center; font-size:5px; font-weight:800; color:#fff; font-family:'Source Code Pro', monospace;}
+  .dot.big{width:15px; height:15px; font-size:6px;}
+  .quadrant{position:absolute; font-size:6.5px; font-family:'Source Code Pro', monospace; letter-spacing:0.08em; font-weight:700; padding:4px 7px; border-radius:999px; background:rgba(255,255,255,0.9); border:1px solid var(--border); color:var(--slate);}
+  .insight-row{display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-top:10px;}
+  .insight{background:#fff; border:1px solid var(--border); border-radius:10px; padding:10px 11px; box-shadow:var(--shadow);}
+  .insight h5{margin:0; font-size:8px; font-family:'Source Code Pro', monospace; letter-spacing:0.1em; color:var(--purple); text-transform:uppercase;}
+  .insight p{margin:5px 0 0 0; font-size:7.8px; color:var(--slate); line-height:1.45;}
+  .insight b{color:var(--navy);}
+
+  /* timeline */
+  .timeline{display:grid; grid-template-columns:1fr auto 1fr auto 1fr; gap:0; margin-top:12px; align-items:start;}
+  .tcard{background:#fff; border:1px solid var(--border); border-radius:12px; padding:12px 13px; box-shadow:var(--shadow); position:relative;}
+  .tcard.featured{border-color:var(--purple); background:linear-gradient(180deg, #fff 0%, #f3f1ff 100%);}
+  .tcard h4{margin:0; font-size:9px; font-family:'Source Code Pro', monospace; letter-spacing:0.12em; color:var(--purple); text-transform:uppercase;}
+  .tcard h3{margin:6px 0 4px 0; font-size:11px; font-weight:700; color:var(--navy); line-height:1.2;}
+  .tcard p{margin:0; font-size:7.8px; color:var(--slate); line-height:1.45;}
+  .tarrow{width:36px; display:flex; align-items:center; justify-content:center; padding-top:32px; color:var(--purple); font-size:18px;}
+  .check{width:18px; height:18px; border-radius:999px; background:var(--green); color:#fff; display:inline-flex; align-items:center; justify-content:center; font-size:10px; margin-right:6px; vertical-align:middle;}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 01 : COVER -->
+<section class="slide">
+  <div class="topbar">
+    <div class="brand">IPS ACADEMY • SIH<span>26</span></div>
+    <div class="topmeta">INTERNAL HACKATHON 05 SEP 2026 • NATIONAL DEADLINE 20 SEP</div>
+  </div>
+  <div class="hero">
+    <div class="hero-left">
+      <div class="kicker"><span class="kicker-badge">175 SOFTWARE PS • V3 EVALUATED</span><span class="kicker-text">580KB raw • text-derived 9-score • reproducible</span></div>
+      <h1 class="h1">Pick smarter.<br><b>Build</b> <em>faster.</em><br>Win internal.</h1>
+      <p class="sub">A judge-ready guide to the <strong>Top 20 Software PS</strong> for SIH 2026 — scored on <strong>Quality × Crowd × Differentiation</strong>, de-weighted for your <strong>05 Sep internal</strong> (`freeze = 12 days away`). No hype. Just signals.</p>
+      <div class="hero-stats">
+        <div class="hstat"><div class="hstat-num">37 <small>/175</small></div><div class="hstat-label">WORKABLE `WPS ≥6.5`</div><div class="hstat-sub">21% in v3 vs 7% in v2</div></div>
+        <div class="hstat"><div class="hstat-num">7.33</div><div class="hstat-label">TOP WPS v3 — SIH26045</div><div class="hstat-sub">Ayush • CLS 3.35 LOW</div></div>
+        <div class="hstat"><div class="hstat-num">+0.45</div><div class="hstat-label">AVG WPS v2 → v3</div><div class="hstat-sub">Quality ↑, Crowd ↓ weight</div></div>
+      </div>
+      <div class="legend" style="margin-top:14px;">
+        <span>● WPS v3 = Q×0.50 + (10-CLS)×0.10 + Diff×0.20</span>
+        <span class="alt">◐ 9 sub-scores per PS • frozen formula • no LLM</span>
+        <span class="alt">▣ v2 for national • v3 for internal</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="mini-card">
+        <h3>WHY THIS DECK WINS</h3>
+        <p><b>Internal judges ≠ portal crowd.</b><br>We halved Crowd weight `0.25→0.10` and boosted Quality `0.40→0.50` for 05 Sep. You pitch execution, not scarcity. National backup is still in v2.</p>
+        <div style="margin-top:12px; display:flex; gap:8px;">
+          <span style="font-size:7px; font-family:'Source Code Pro',monospace; background:#fff; color:var(--navy); padding:5px 8px; border-radius:999px; font-weight:700;">V3 = INTERNAL</span>
+          <span style="font-size:7px; font-family:'Source Code Pro',monospace; background:rgba(255,255,255,0.15); color:#cbd5e0; padding:5px 8px; border-radius:999px; border:1px solid rgba(255,255,255,0.2)">V2 = NATIONAL</span>
+        </div>
+      </div>
+      <div style="background:#fff; border:1px solid var(--border); border-radius:12px; padding:12px 13px; box-shadow:var(--shadow);">
+        <div style="font-size:7px; font-family:'Source Code Pro',monospace; letter-spacing:0.12em; color:var(--slate); font-weight:700;">HOW TO USE (30 SEC)</div>
+        <div style="margin-top:8px; display:grid; grid-template-columns:auto 1fr; gap:6px 8px; font-size:7.9px; color:var(--slate); line-height:1.4;">
+          <span style="color:var(--purple); font-weight:700;">1</span><span><b style="color:var(--navy)">Cover →</b> pick your 2 from Top 20 table (p.2)</span>
+          <span style="color:var(--purple); font-weight:700;">2</span><span><b style="color:var(--navy)">Combos →</b> choose 1 of 3 pre-built pairs (shared stack)</span>
+          <span style="color:var(--purple); font-weight:700;">3</span><span><b style="color:var(--navy)">Theme/Org →</b> hedge with same-mentor backup</span>
+          <span style="color:var(--purple); font-weight:700;">4</span><span><b style="color:var(--navy)">Submit →</b> upload by 04 Sep 18:00 (internal), 14 Sep (national)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pagenum">01 / 10 — COVER</div>
+  <div class="watermark">IPS Academy • SIH26 • 175 PS • v3 internal weights • 03 Sep 2026</div>
+</section>
+
+<!-- SLIDE 02 : METHOD -->
+<section class="slide">
+  <div class="topbar"><div class="brand">METHODOLOGY — <span>REPRODUCIBLE, NO LLM</span></div><div class="topmeta">EVAL_V2.PY • 175 PS • 9 SCORES • 2 WEIGHTINGS</div></div>
+  <div style="padding:0.32in 0.55in 0.25in 0.55in; flex:1; display:flex; flex-direction:column;">
+    <div class="eyebrow">02 — HOW WE SCORED</div>
+    <h2 class="h2">Two lenses. <b>One engine.</b></h2>
+    <p class="h2-desc">All 175 Software PS from <span style="font-family:'Source Code Pro',monospace; background:var(--bg2); border:1px solid var(--border); padding:1px 6px; border-radius:999px; font-size:8px;">vedantchalke36/sih2026_ps.json</span> (580KB) — text-derived 9 sub-scores from title + description + dataset_link + theme + org. No GPT. Rerun with <span style="font-family:'JetBrains Mono',monospace; background:#0f172a; color:#e2e8f0; padding:2px 6px; border-radius:6px; font-size:7px;">python3 /tmp/eval_v2.py</span></p>
+    <div class="method-grid">
+      <div class="mcard">
+        <h4>QUALITY (0-10)</h4>
+        <h3>Innovation × Feasibility × Impact</h3>
+        <p>Inner-weighted from 5 parts. Rewards treaty/Bhashini/graph depth and demoability in 48h. Text-derived, not templated.</p>
+        <div class="formula"><b>Q</b> = Innov×0.30 + Feas×0.25<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Impact×0.20 + Demo×0.15 + Team×0.10</div>
+        <div class="pillrow"><span class="pill purple">Innov 9.0 max</span><span class="pill">Feas 7.5</span><span class="pill">Team 5-7</span></div>
+      </div>
+      <div class="mcard green">
+        <h4>CROWD LIKELIHOOD (CLS 0-10)</h4>
+        <h3>Who else will pick this?</h3>
+        <p>Predicts portal submissions. Higher = bloodbath. Suppressed niche (GRATK/TKDL) and eased OCR/image.</p>
+        <div class="formula"><b>CLS</b> = Theme×0.25 + Org×0.20 + Keyword×0.25<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ PerceivedEase×0.20 + Buzz×0.10<br><span style="color:var(--slate)">→ Expected = CLS×50 (`/500`)</span></div>
+        <div class="pillrow"><span class="pill green">Low 3.35 = 167</span><span class="pill">Med 5.05 = 252</span><span class="pill" style="background:var(--red-bg); border-color:var(--red-brd); color:var(--red)">High 8.40 = 420</span></div>
+      </div>
+      <div class="mcard navy">
+        <h4>WPS — WIN PROBABILITY SCORE</h4>
+        <h3>v2 national vs v3 internal</h3>
+        <p>Internal is 12 days before freeze — execution beats scarcity. So we re-weighted openly.</p>
+        <div class="formula" style="background:var(--purple-light); border-color:var(--purple-border)"><b>v2 national</b>: Q×0.40 + (10-CLS)×0.25 + Diff×0.15 + Data×0.10<br><b style="color:var(--purple)">v3 internal</b>: <b>Q×0.50</b> + (10-CLS)×<b>0.10</b> + Diff×<b>0.20</b> + Data×0.10<br><span style="color:var(--slate)">+ Demo×0.05 + MFit×0.05 both</span></div>
+        <div class="pillrow"><span class="pill purple">v3 avg 5.78 (+0.45)</span><span class="pill green">37 WORKABLE</span><span class="pill">v2 avg 5.33</span></div>
+      </div>
+    </div>
+    <div class="note">
+      <div class="note-icon">✓</div>
+      <p><b>Fixed in v2:</b> Exact longest-key <span style="font-family:'Source Code Pro',monospace; background:#fff; border:1px solid var(--border); padding:1px 5px; border-radius:999px;">ORG_TABLE</span> — MDoNER ≠ MoE S. SIH26002 CLS 6.95→5.45 (−1.50), 101 PS ministry_fit corrected. <b style="color:var(--purple)">v3 is v2 with honest weights for 05 Sep</b> — not a new model. &nbsp; <span style="font-family:'Source Code Pro',monospace; color:var(--purple); background:var(--purple-light); border:1px solid var(--purple-border); padding:2px 6px; border-radius:999px;">all-175-evaluated-v3.json • 365KB</span></p>
+    </div>
+  </div>
+  <div class="pagenum">02 / 10 — METHOD</div>
+  <div class="watermark">IPS Academy • SIH26 • reproducible • no LLM hallucinations</div>
+</section>
+
+<!-- SLIDE 03 : TOP 20 TABLE -->
+<section class="slide">
+  <div class="topbar"><div class="brand">LEADERBOARD — <span>TOP 20 / 175 SOFTWARE</span></div><div class="topmeta">SORTED BY WPS v3 (INTERNAL) • v2 IN SMALL • CLS = CROWD</div></div>
+  <div style="padding:0.22in 0.45in 0.2in 0.45in; flex:1; display:flex; flex-direction:column;">
+    <div style="display:flex; align-items:end; justify-content:space-between;">
+      <div><div class="eyebrow">03 — TOP 20 LEADERBOARD</div><h2 class="h2" style="font-size:22px;">Ranked by <b>WPS v3 (internal)</b> <span style="font-size:11px; color:var(--slate); font-weight:400;">— v2 (national) shown for comparison</span></h2></div>
+      <div style="text-align:right; font-size:7px; font-family:'Source Code Pro',monospace; color:var(--slate); line-height:1.5;">
+        <span style="display:inline-flex; align-items:center; gap:5px;"><i style="width:8px; height:8px; background:var(--green); border-radius:999px; display:inline-block;"></i> LOW freeze 167-192</span> &nbsp;
+        <span style="display:inline-flex; align-items:center; gap:5px;"><i style="width:8px; height:8px; background:#f59e0b; border-radius:999px; display:inline-block;"></i> MED 250-305</span> &nbsp;
+        <span style="display:inline-flex; align-items:center; gap:5px;"><i style="width:8px; height:8px; background:var(--red); border-radius:999px; display:inline-block;"></i> HIGH 337+</span>
+      </div>
+    </div>
+    <div class="table-wrap" style="margin-top:8px; flex:1;">
+      <table>
+        <thead><tr><th style="width:36px;">#</th><th style="width:82px;">PS ID</th><th>ORGANIZATION</th><th>THEME</th><th style="width:92px;">WPS v3 <span style="font-weight:400; opacity:0.7; text-transform:none; letter-spacing:0">/ v2</span></th><th style="width:86px;">CLS / 500</th><th style="width:52px;">Q</th><th style="width:78px;">VERDICT</th></tr></thead>
+        <tbody>
+          <tr><td><div class="rank rank-1">1</div></td><td><span class="psid">SIH26045</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">Ministry of Ayush</div><div class="org">IP-SAKTI Sahayak — RAG + TKDL</div></td><td><span class="theme med">MedTech</span></td><td><div class="wps">7.33 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 7.20</span></div><div class="wps-bar"><div class="wps-fill" style="width:73%; background:var(--purple)"></div></div></td><td><span class="cls-badge cls-low">3.35 • 167</span><div style="font-size:6.5px; color:var(--slate); margin-top:2px; font-family:'Source Code Pro',monospace">LOW • 19 Sep</div></td><td style="font-weight:700; color:var(--navy)">7.47</td><td><span class="verdict">WORKABLE</span></td></tr>
+          <tr><td><div class="rank rank-2">2</div></td><td><span class="psid">SIH26014</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">Rural Development</div><div class="org">GIS Land Stack (DPI)</div></td><td><span class="theme agri">Agri / FoodTech</span></td><td><div class="wps">7.14 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 6.77</span></div><div class="wps-bar"><div class="wps-fill" style="width:71%; background:var(--navy)"></div></div></td><td><span class="cls-badge cls-med">5.00 • 250</span><div style="font-size:6.5px; color:var(--slate); margin-top:2px; font-family:'Source Code Pro',monospace">MED • 18 Sep</div></td><td style="font-weight:700; color:var(--navy)">7.62</td><td><span class="verdict">WORKABLE</span></td></tr>
+          <tr><td><div class="rank rank-3">3</div></td><td><span class="psid">SIH26047</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">Ministry of Ayush</div><div class="org">Patient Case-Taking</div></td><td><span class="theme med">MedTech</span></td><td><div class="wps">7.03 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 6.86</span></div><div class="wps-bar"><div class="wps-fill" style="width:70%; background:#7c3aed"></div></div></td><td><span class="cls-badge cls-low">3.85 • 192</span><div style="font-size:6.5px; color:var(--slate); margin-top:2px; font-family:'Source Code Pro',monospace">LOW • 19 Sep</div></td><td style="font-weight:700; color:var(--navy)">7.42</td><td><span class="verdict">WORKABLE</span></td></tr>
+          <tr><td><div class="rank rank-oth">4</div></td><td><span class="psid">SIH26036</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">Consumer Affairs</div><div class="org">Verification of Weighing Instruments</div></td><td><span class="theme misc">Misc</span></td><td><div class="wps">6.92 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 6.61</span></div><div class="wps-bar"><div class="wps-fill" style="width:69%; background:#475569"></div></div></td><td><span class="cls-badge cls-med">5.05 • 252</span></td><td style="font-weight:700; color:var(--navy)">7.05</td><td><span class="verdict">WORKABLE</span></td></tr>
+          <tr><td><div class="rank rank-oth">5</div></td><td><span class="psid">SIH26184</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">Home Affairs</div><div class="org">Cybercrime Predictive Framework</div></td><td><span class="theme block">Blockchain</span></td><td><div class="wps">6.62 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 6.12</span></div><div class="wps-bar"><div class="wps-fill" style="width:66%; background:#475569"></div></div></td><td><span class="cls-badge cls-med">6.10 • 305</span></td><td style="font-weight:700; color:var(--navy)">7.35</td><td><span class="verdict">WORKABLE</span></td></tr>
+          <tr><td><div class="rank rank-oth">6</div></td><td><span class="psid">SIH26138</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">Egreen Quanta</div><div class="org">Quantum Fleet + Green Optimization</div></td><td><span class="theme" style="background:#ecfdf5; border-color:#a7f3d0; color:#065f46">CleanTech</span></td><td><div class="wps">6.58 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 6.33</span></div><div class="wps-bar"><div class="wps-fill" style="width:65%; background:#475569"></div></div></td><td><span class="cls-badge cls-med">5.05 • 252</span></td><td>6.47</td><td><span class="verdict risk">WORKABLE</span></td></tr>
+          <tr><td><div class="rank rank-oth">7</div></td><td><span class="psid">SIH26011</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">Rural Development</div><div class="org">3D ULPIN + vertical Property Mapping</div></td><td><span class="theme auto">Smart Auto</span></td><td><div class="wps">6.49 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 5.92</span></div><div class="wps-bar"><div class="wps-fill" style="width:64%; background:#475569"></div></div></td><td><span class="cls-badge cls-med">6.75 • 337</span></td><td>7.07</td><td><span class="verdict risk">WORKABLE</span></td></tr>
+          <tr><td><div class="rank rank-oth">8</div></td><td><span class="psid">SIH26101</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">MoSPI</div><div class="org">AI Competency-Gap Learning Platform</div></td><td><span class="theme" style="background:#eef2ff; border-color:#c7d2fe; color:#3730a3">Smart Edu</span></td><td><div class="wps">6.46 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 6.11</span></div><div class="wps-bar"><div class="wps-fill" style="width:64%; background:#475569"></div></div></td><td><span class="cls-badge cls-med">5.90 • 295</span></td><td>7.20</td><td><span class="verdict risk">WORKABLE</span></td></tr>
+          <tr><td><div class="rank rank-oth">9</div></td><td><span class="psid">SIH26046</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">Ministry of Ayush</div><div class="org">AIIA Clinical Trials Dashboard</div></td><td><span class="theme med">MedTech</span></td><td><div class="wps">6.45 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 6.50</span></div><div class="wps-bar"><div class="wps-fill" style="width:64%; background:#475569"></div></div></td><td><span class="cls-badge cls-low">3.55 • 177</span></td><td>6.60</td><td><span class="verdict risk">WORKABLE</span></td></tr>
+          <tr><td><div class="rank rank-oth">10</div></td><td><span class="psid">SIH26137</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">Egreen Quanta</div><div class="org">Quantum Traffic Route Optimization</div></td><td><span class="theme" style="background:#fef3c7; border-color:#fde68a; color:#92400e">Trans/Log</span></td><td><div class="wps">6.41 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 6.00</span></div><div class="wps-bar"><div class="wps-fill" style="width:64%; background:#475569"></div></div></td><td><span class="cls-badge cls-med">6.15 • 307</span></td><td>6.40</td><td><span class="verdict risk">WORKABLE</span></td></tr>
+          <tr><td><div class="rank rank-oth">11</div></td><td><span class="psid">SIH26019</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">Rural Development</div><div class="org">National Digital Platform — Research & Policy</div></td><td><span class="theme auto">Smart Auto</span></td><td><div class="wps">6.36 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 5.75</span></div><div class="wps-bar"><div class="wps-fill" style="width:63%; background:#475569"></div></div></td><td><span class="cls-badge cls-high">7.40 • 370</span></td><td>7.25</td><td><span class="verdict risk">WORKABLE</span></td></tr>
+          <tr><td><div class="rank rank-oth">12</div></td><td><span class="psid">SIH26038</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">MathWorks</div><div class="org">Explainable AI — Diabetic Retinopathy (Rural)</div></td><td><span class="theme med">MedTech</span></td><td><div class="wps">6.35 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 6.00</span></div><div class="wps-bar"><div class="wps-fill" style="width:63%; background:#475569"></div></div></td><td><span class="cls-badge cls-med">6.10 • 305</span></td><td>6.88</td><td><span class="verdict risk">HIGH RISK</span></td></tr>
+          <tr><td><div class="rank rank-oth">13</div></td><td><span class="psid">SIH26168</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">ISRO</div><div class="org">AI-ML Dead Reckoning (Seamless Nav)</div></td><td><span class="theme" style="background:#e0f2fe; border-color:#bae6fd; color:#0c4a6e">Smart Veh</span></td><td><div class="wps">6.32 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 5.96</span></div><div class="wps-bar"><div class="wps-fill" style="width:63%; background:#475569"></div></div></td><td><span class="cls-badge cls-med">6.05 • 302</span></td><td>6.75</td><td><span class="verdict risk">HIGH RISK</span></td></tr>
+          <tr><td><div class="rank rank-oth">14</div></td><td><span class="psid">SIH26018</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">Rural Development</div><div class="org">Land Record Digitization + Validation</div></td><td><span class="theme auto">Smart Auto</span></td><td><div class="wps">6.29 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 5.65</span></div><div class="wps-bar"><div class="wps-fill" style="width:62%; background:#475569"></div></div></td><td><span class="cls-badge cls-high">7.70 • 385</span></td><td>7.18</td><td><span class="verdict risk">HIGH RISK</span></td></tr>
+          <tr><td><div class="rank rank-oth">15</div></td><td><span class="psid">SIH26012</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">Rural Development</div><div class="org">Urban Parcel Mapping + Cadastral Extract</div></td><td><span class="theme auto">Smart Auto</span></td><td><div class="wps">6.29 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 5.57</span></div><div class="wps-bar"><div class="wps-fill" style="width:62%; background:#475569"></div></div></td><td><span class="cls-badge cls-high">8.20 • 410</span></td><td>7.48</td><td><span class="verdict risk">HIGH RISK</span></td></tr>
+          <tr><td><div class="rank rank-oth">16</div></td><td><span class="psid">SIH26017</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">Rural Development</div><div class="org">Predictive — Land Acquisition Delays</div></td><td><span class="theme auto">Smart Auto</span></td><td><div class="wps">6.26 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 5.91</span></div><div class="wps-bar"><div class="wps-fill" style="width:62%; background:#475569"></div></div></td><td><span class="cls-badge cls-med">5.85 • 292</span></td><td>7.13</td><td><span class="verdict risk">HIGH RISK</span></td></tr>
+          <tr><td><div class="rank rank-oth">17</div></td><td><span class="psid">SIH26089</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">Cooperation</div><div class="org">Cooperative Gig Services Platform</div></td><td><span class="theme agri">Agri / FoodTech</span></td><td><div class="wps">6.24 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 6.04</span></div><div class="wps-bar"><div class="wps-fill" style="width:62%; background:#475569"></div></div></td><td><span class="cls-badge cls-med">5.05 • 252</span></td><td>6.88</td><td><span class="verdict risk">HIGH RISK</span></td></tr>
+          <tr><td><div class="rank rank-oth">18</div></td><td><span class="psid">SIH26128</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">Maharashtra</div><div class="org">Early detection — Livestock Diseases</div></td><td><span class="theme med">MedTech</span></td><td><div class="wps">6.21 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 6.11</span></div><div class="wps-bar"><div class="wps-fill" style="width:62%; background:#475569"></div></div></td><td><span class="cls-badge cls-low">4.35 • 217</span></td><td>6.88</td><td><span class="verdict risk">HIGH RISK</span></td></tr>
+          <tr><td><div class="rank rank-oth">19</div></td><td><span class="psid">SIH26111</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">Fisheries & Animal Husb.</div><div class="org">AI Rapid Feed & Silage Quality Test</div></td><td><span class="theme agri">Agri / FoodTech</span></td><td><div class="wps">6.21 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 5.90</span></div><div class="wps-bar"><div class="wps-fill" style="width:62%; background:#475569"></div></div></td><td><span class="cls-badge cls-med">5.65 • 282</span></td><td>7.10</td><td><span class="verdict risk">HIGH RISK</span></td></tr>
+          <tr><td><div class="rank rank-oth">20</div></td><td><span class="psid">SIH26176</span></td><td><div style="font-size:7.6px; font-weight:600; color:var(--navy);">ISRO</div><div class="org">ORCA — Marine Ecosystem (Agents)</div></td><td><span class="theme" style="background:#fef9c3; border-color:#fde68a; color:#713f12">Disaster</span></td><td><div class="wps">6.21 <span style="color:var(--slate); font-weight:400; font-size:7px;">/ 5.80</span></div><div class="wps-bar"><div class="wps-fill" style="width:62%; background:#475569"></div></div></td><td><span class="cls-badge cls-med">6.20 • 310</span></td><td>7.30</td><td><span class="verdict risk">HIGH RISK</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:6px; display:flex; gap:8px; font-size:7px; font-family:'Source Code Pro',monospace; color:var(--slate);">
+      <span>▸ Green = submit by 19 Sep — safest for national</span><span>▸ Amber = 18 Sep — upload early AM</span><span>▸ Red = high freeze — internal only pick before 10 Sep</span><span style="margin-left:auto; background:var(--purple-light); border:1px solid var(--purple-border); color:var(--purple); padding:2px 7px; border-radius:999px; font-weight:700;">Q = Quality • CLS = Crowd Likelihood • WPS = Win Probability Score</span>
+    </div>
+  </div>
+  <div class="pagenum">03 / 10 — TOP 20</div>
+  <div class="watermark">Source: all-175-evaluated-v3.json • sorted by WPS v3 • verifiable</div>
+</section>
+
+<!-- SLIDE 04 : TOP 3 COMBOS -->
+<section class="slide">
+  <div class="topbar"><div class="brand">COMBOS — <span>TOP 3 FOR INTERNAL (05 SEP)</span></div><div class="topmeta">2 PS SHORTLIST • 1 MVP, 2 SLIDES • FREEZE-AWARE</div></div>
+  <div style="padding:0.28in 0.55in 0.22in 0.55in; flex:1; display:flex; flex-direction:column;">
+    <div class="eyebrow">04 — YOUR 2-PS SHORTLIST</div>
+    <h2 class="h2">Three pre-built pairs. <b>Pick one.</b></h2>
+    <p class="h2-desc">All pairs re-use >60% of code. Primary = pitch hard, Backup = SPOC-friendly fallback if mentor says "too many on Ayush". Both are WORKABLE in v2 *and* v3 — safe for national too.</p>
+    <div class="combo-grid">
+      <div class="combo featured">
+        <div class="combo-top">
+          <div class="combo-num">COMBO A — SAFEST (SAME MENTOR STACK)</div>
+          <h3>SIH26045 <span>×</span> SIH26047<br><span style="font-size:8.5px; font-weight:600; color:var(--purple)">IP-SAKTI Sahayak × Case-Taking</span></h3>
+          <p><b>Why:</b> Both <b>Ministry of Ayush • MedTech</b> — same SPOC reviewer, shared TKDL / Bhashini / citation stack. If #1 hits 500, judge keeps you in Ayush.</p>
+          <div class="combo-tags"><span class="tag purple">Ayush 3 PS</span><span class="tag green">CLS 3.35 + 3.85 LOW</span><span class="tag gray">Diff 7.5 + 7.0</span></div>
+          <div class="combo-meta">
+            <div><div class="meta-k">COMBINED WPS v3</div><div class="meta-v">14.36 <small>(7.33+7.03) #1 + #3</small></div></div>
+            <div><div class="meta-k">SHARED STACK</div><div class="meta-v">RAG + Graph + Bhashini <small>68% code</small></div></div>
+          </div>
+        </div>
+        <div class="combo-foot"><span class="foot-label">RECOMMENDED FOR MOST TEAMS →</span><span class="foot-val">FILE 04 SEP 10:00</span></div>
+      </div>
+      <div class="combo">
+        <div class="combo-top">
+          <div class="combo-num">COMBO B — HIGHEST QUALITY (HEDGE THEMES)</div>
+          <h3>SIH26045 <span>×</span> SIH26014<br><span style="font-size:8.5px; font-weight:600; color:var(--navy)">IP-SAKTI × GIS Land Stack (DPI)</span></h3>
+          <p><b>Why:</b> #1 (7.33) + #2 (7.14) overall. Different theme (MedTech vs Agri GIS) + different org. Wins if jury is GIS-heavy or Ayush slot is taken.</p>
+          <div class="combo-tags"><span class="tag purple">Q 7.47 + 7.62</span><span class="tag green">14.47 best</span><span class="tag gray">CLS 3.35 • 5.00</span></div>
+          <div class="combo-meta">
+            <div><div class="meta-k">COMBINED WPS v3</div><div class="meta-v">14.47 <small>#1 + #2 peak</small></div></div>
+            <div><div class="meta-k">SHARED STACK</div><div class="meta-v">Citation UI + Map <small>42% code</small></div></div>
+          </div>
+        </div>
+        <div class="combo-foot"><span class="foot-label">IF JURY LOVES GIS</span><span class="foot-val">Q 7.62 MAX</span></div>
+      </div>
+      <div class="combo">
+        <div class="combo-top">
+          <div class="combo-num">COMBO C — FEASIBLE BACKUP (CONSUMER + AYUSH)</div>
+          <h3>SIH26045 <span>×</span> SIH26034<br><span style="font-size:8.5px; font-weight:600; color:var(--navy)">IP-SAKTI × Packaged Commodities OCR</span></h3>
+          <p><b>Why:</b> Your 6 shortlist. Feas 7.5 Demo 7.5 — scans MRP in 90s. Needs one twist (coin-scale) to push WPS 5.88→6.1. Live theme Agri → CLS 5.75.</p>
+          <div class="combo-tags"><span class="tag purple">Feas 7.5</span><span class="tag gray">CLS 3.35 • 5.75</span><span class="tag green">Demo 7.5</span></div>
+          <div class="combo-meta">
+            <div><div class="meta-k">COMBINED WPS v3</div><div class="meta-v">13.21 <small>(7.33 + 5.88*)</small></div></div>
+            <div><div class="meta-k">SHARED STACK</div><div class="meta-v">OCR + Report PDF <small>35% code</small></div></div>
+          </div>
+        </div>
+        <div class="combo-foot"><span class="foot-label">NEEDS TWIST</span><span class="foot-val">*+0.22 with coin</span></div>
+      </div>
+    </div>
+    <div style="margin-top:10px; background:var(--navy); color:#fff; border-radius:10px; padding:10px 14px; display:flex; gap:14px; align-items:center;">
+      <div style="background:var(--purple); color:#fff; font-size:7px; font-family:'Source Code Pro',monospace; font-weight:700; letter-spacing:0.12em; padding:6px 9px; border-radius:999px; white-space:nowrap;">PRO TIP</div>
+      <p style="margin:0; font-size:8px; line-height:1.5; color:#cbd5e0;">Submit <b style="color:#fff">Combo A</b> for internal: build <i style="color:#a5b4fc">one</i> RAG + citation MVP, toggle between TKDL (45) and case proforma (47). Judges see 1.6× work for 1× demo. For national, keep <b style="color:#fff">SIH26045</b> as anchor — it is #1 in <b style="color:#fff">both v2 and v3</b>.</p>
+      <span style="margin-left:auto; font-size:7px; font-family:'Source Code Pro',monospace; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); padding:5px 9px; border-radius:999px; white-space:nowrap; color:#e2e8f0;">SPOC: "We commit to whichever you forward"</span>
+    </div>
+  </div>
+  <div class="pagenum">04 / 10 — COMBOS (INTERNAL)</div>
+  <div class="watermark">Build once, pitch twice • shared Bhashini + graph • 68% reuse</div>
+</section>
+
+<!-- SLIDE 05 : THEME COMBOS -->
+<section class="slide">
+  <div class="topbar"><div class="brand">COMBOS BY — <span>THEME</span></div><div class="topmeta">SAME THEME = SAME JURY PANEL • REUSE DOMAIN VOCAB</div></div>
+  <div style="padding:0.28in 0.55in 0.22in 0.55in; flex:1; display:flex; flex-direction:column;">
+    <div class="eyebrow">05 — BEST PAIRS BY THEME</div>
+    <h2 class="h2">If a theme clicks, <b>double down.</b></h2>
+    <p class="h2-desc">Picking two from the same theme impresses domain judges and lets you reuse datasets, eval rubrics, and field personas.</p>
+    <div class="combo-grid">
+      <div class="combo">
+        <div class="combo-top">
+          <div class="combo-num">MEDTECH / BIOTECH — 5 IN TOP 20</div>
+          <h3>SIH26045 × SIH26128<br><span style="font-size:8.5px; font-weight:600; color:#3730a3">Ayush RAG × Livestock Early Detection</span></h3>
+          <p><b>5/20</b> of Top 20 are MedTech. Both need multilingual + field ASHA persona. Citation + triage flow re-used. CLS both LOW.</p>
+          <div class="combo-tags"><span class="tag" style="background:#eef2ff; border-color:#c7d2fe; color:#3730a3">MedTech</span><span class="tag green">WPS 13.54</span><span class="tag gray">CLS 3.35+4.35</span></div>
+          <div class="combo-meta"><div><div class="meta-k">PERFECT FOR</div><div class="meta-v">Medical college teams <small>doctor mentor</small></div></div><div><div class="meta-k">SHARED</div><div class="meta-v">Bhashini + offline <small>sync</small></div></div></div>
+        </div>
+        <div class="combo-foot"><span class="foot-label">JURY LOVES THIS →</span><span class="foot-val">HIGHEST THEME DENSITY</span></div>
+      </div>
+      <div class="combo">
+        <div class="combo-top">
+          <div class="combo-num">SMART AUTOMATION — 5 IN TOP 20</div>
+          <h3>SIH26011 × SIH26017<br><span style="font-size:8.5px; font-weight:600; color:#7c2d12">3D ULPIN × Land Acquisition Delay</span></h3>
+          <p>Both <b>Rural Development</b>. One maps, one predicts delay — same ULPIN parcel IDs, same GIS base. One pipeline, two PPTs.</p>
+          <div class="combo-tags"><span class="tag" style="background:#fff7ed; border-color:#fed7aa; color:#7c2d12">Smart Auto</span><span class="tag gray">WPS 12.75</span><span class="tag green">Q 7.07+7.13</span></div>
+          <div class="combo-meta"><div><div class="meta-k">PERFECT FOR</div><div class="meta-v">GIS / civil teams <small>QGIS + PostGIS</small></div></div><div><div class="meta-k">SHARED</div><div class="meta-v">ULPIN + GeoJSON <small>80% code</small></div></div></div>
+        </div>
+        <div class="combo-foot"><span class="foot-label">EASIEST TO DEMO →</span><span class="foot-val">MAP IN 60 SEC</span></div>
+      </div>
+      <div class="combo">
+        <div class="combo-top">
+          <div class="combo-num">AGRI / FOODTECH — 3 IN TOP 20</div>
+          <h3>SIH26014 × SIH26111<br><span style="font-size:8.5px; font-weight:600; color:#065f46">GIS Land Stack × Dairy Feed Test</span></h3>
+          <p>Rural DPI + dairy quality — field officer persona re-used. Slide 3 of both PPTs is same "Officer in village" story.</p>
+          <div class="combo-tags"><span class="tag" style="background:#ecfdf5; border-color:#a7f3d0; color:#065f46">Agri</span><span class="tag gray">WPS 13.35</span><span class="tag green">Q 7.62 max</span></div>
+          <div class="combo-meta"><div><div class="meta-k">PERFECT FOR</div><div class="meta-v">Agri univ teams <small>Krishi mentor</small></div></div><div><div class="meta-k">SHARED</div><div class="meta-v">Offline + geo-tag <small>photo</small></div></div></div>
+        </div>
+        <div class="combo-foot"><span class="foot-label">RURAL DPI PITCH →</span><span class="foot-val">STORY WINS</span></div>
+      </div>
+    </div>
+    <div style="margin-top:10px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">
+      <div style="background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:9px 11px; display:flex; gap:9px; align-items:center;">
+        <span style="width:26px; height:26px; border-radius:999px; background:#eef2ff; border:1px solid #c7d2fe; color:#3730a3; display:flex; align-items:center; justify-content:center; font-size:12px;">⚗</span>
+        <div><div style="font-size:7.5px; font-family:'Source Code Pro',monospace; letter-spacing:0.1em; color:var(--slate); font-weight:700;">CLEANTECH × TRANS/LOG</div><div style="font-size:7.8px; color:var(--navy); font-weight:600;">SIH26138 × SIH26137 (Egreen) — quantum pair</div><div style="font-size:7px; color:var(--slate);">Same org, same solver — pitch as suite. WPS 12.99</div></div>
+      </div>
+      <div style="background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:9px 11px; display:flex; gap:9px; align-items:center;">
+        <span style="width:26px; height:26px; border-radius:999px; background:#fdf2f8; border:1px solid #fbcfe8; color:#831843; display:flex; align-items:center; justify-content:center; font-size:12px;">◈</span>
+        <div><div style="font-size:7.5px; font-family:'Source Code Pro',monospace; letter-spacing:0.1em; color:var(--slate); font-weight:700;">BLOCKCHAIN</div><div style="font-size:7.8px; color:var(--navy); font-weight:600;">SIH26184 alone — don't pair with MHA trio</div><div style="font-size:7px; color:var(--slate);">MHA 3 PS all CLS 8.4 — cannibalize</div></div>
+      </div>
+      <div style="background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:9px 11px; display:flex; gap:9px; align-items:center;">
+        <span style="width:26px; height:26px; border-radius:999px; background:#e0f2fe; border:1px solid #bae6fd; color:#0c4a6e; display:flex; align-items:center; justify-content:center; font-size:12px;">◎</span>
+        <div><div style="font-size:7.5px; font-family:'Source Code Pro',monospace; letter-spacing:0.1em; color:var(--slate); font-weight:700;">ISRO — SMART VEH / DISASTER</div><div style="font-size:7.8px; color:var(--navy); font-weight:600;">SIH26168 × SIH26176</div><div style="font-size:7px; color:var(--slate);">WPS 12.53 • Avoid SIH26171 (5.40)</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="pagenum">05 / 10 — THEMES</div>
+  <div class="watermark">Same jury panel = same vocabulary wins • reuse datasets</div>
+</section>
+
+<!-- SLIDE 06 : ORG COMBOS -->
+<section class="slide">
+  <div class="topbar"><div class="brand">COMBOS BY — <span>ORGANIZATION</span></div><div class="topmeta">SAME MINISTRY = SAME MENTOR + SAME EVAL RUBRIC</div></div>
+  <div style="padding:0.28in 0.55in 0.22in 0.55in; flex:1; display:flex; flex-direction:column;">
+    <div class="eyebrow">06 — BEST PAIRS BY ORGANIZATION</div>
+    <h2 class="h2">One ministry. <b>Two shots.</b></h2>
+    <p class="h2-desc">SPOCs batch-assign mentors per org. Two PS from same org = one prep call, one tech stack, two chances with same reviewer.</p>
+    <div class="combo-grid">
+      <div class="combo featured">
+        <div class="combo-top">
+          <div class="combo-num">MINISTRY OF AYUSH — 3 IN TOP 20 • CLS LOWEST</div>
+          <h3>SIH26045 × SIH26047<br><span style="font-size:8.5px; font-weight:600; color:var(--purple)">IP-SAKTI × Case-Taking — the Ayush sweep</span></h3>
+          <p><b>Why org wins:</b> Only 4 Ayush PS in 175 → ministry_fit 8.5 (sharp intent). Both LOW freeze (167,192). Reviewers love TKDL depth.</p>
+          <div class="combo-tags"><span class="tag purple">Ayush ×2</span><span class="tag green">CLS 3.35 • 3.85</span><span class="tag gray">MFit 8.5</span></div>
+          <div class="combo-meta"><div><div class="meta-k">ALSO IN ORG</div><div class="meta-v">SIH26046 (6.45) <small>dashboard fallback</small></div></div><div><div class="meta-k">INSIDER TIP</div><div class="meta-v">Add TKDL citation <small>judge's pet project</small></div></div></div>
+        </div>
+        <div class="combo-foot"><span class="foot-label">★ BEST ORG BET →</span><span class="foot-val">LOWEST ORG CLS 2.0</span></div>
+      </div>
+      <div class="combo">
+        <div class="combo-top">
+          <div class="combo-num">MINISTRY OF RURAL DEVELOPMENT — 6 IN TOP 20</div>
+          <h3>SIH26014 × SIH26011<br><span style="font-size:8.5px; font-weight:600; color:var(--navy)">Land Stack (DPI) × 3D ULPIN</span></h3>
+          <p><b>Why org wins:</b> Biggest org in Top 20 (6/20). DPI is 2026 buzz — SPOCs have GIS lab partner ready. High Q (7.62 + 7.07).</p>
+          <div class="combo-tags"><span class="tag purple">Rural Dev ×2</span><span class="tag gray">Q 7.62 peak</span><span class="tag gray">CLS 5.00 • 6.75</span></div>
+          <div class="combo-meta"><div><div class="meta-k">ALSO IN ORG</div><div class="meta-v">+26017,26018,26019 <small>5 more</small></div></div><div><div class="meta-k">SHARED</div><div class="meta-v">ULPIN + Bhulekh <small>IDs</small></div></div></div>
+        </div>
+        <div class="combo-foot"><span class="foot-label">IF COLLEGE HAS GIS LAB →</span><span class="foot-val">6 SHOTS IN ORG</span></div>
+      </div>
+      <div class="combo">
+        <div class="combo-top">
+          <div class="combo-num">EGREEN QUANTA + ISRO — QUANTUM / SPACE</div>
+          <h3>SIH26138 × SIH26168<br><span style="font-size:8.5px; font-weight:600; color:var(--navy)">Green Fleet × Dead Reckoning</span></h3>
+          <p><b>Why:</b> Two niche orgs judges remember. Quantum-inspired + ISRO navigation = demo story that stands out in 72k ideas.</p>
+          <div class="combo-tags"><span class="tag gray">CleanTech × SmartVeh</span><span class="tag green">WPS 12.90</span><span class="tag purple">Diff 7.0+</span></div>
+          <div class="combo-meta"><div><div class="meta-k">ALSO</div><div class="meta-v">ISRO 26176 (ORCA) <small>6.21 backup</small></div></div><div><div class="meta-k">CAVEAT</div><div class="meta-v">Isolated org → <small>fewer mentors</small></div></div></div>
+        </div>
+        <div class="combo-foot"><span class="foot-label">FOR CS + MECH TEAM →</span><span class="foot-val">STAND OUT</span></div>
+      </div>
+    </div>
+    <div style="margin-top:10px; background:linear-gradient(90deg, #fff 0%, #fef3c7 100%); border:1px solid #fde68a; border-radius:10px; padding:9px 12px; display:flex; gap:10px; align-items:center;">
+      <span style="width:26px; height:26px; border-radius:999px; background:#f59e0b; color:#fff; display:flex; align-items:center; justify-content:center; font-size:12px;">⚠</span>
+      <p style="margin:0; font-size:7.9px; color:var(--slate); line-height:1.45;"><b style="color:var(--navy)">Avoid pairing two MHA PS</b> (SIH26187 + 26188 + 26190 — all CLS 8.40, 420/500). Judges will only forward one MHA team. Same for two Miscellaneous — theme 10.0 drags both. &nbsp; <span style="font-family:'Source Code Pro',monospace; background:#fff; border:1px solid #fde68a; padding:2px 6px; border-radius:999px; font-size:7px;">MHA trio = 420/500 HIGH • pick at most one</span></p>
+    </div>
+  </div>
+  <div class="pagenum">06 / 10 — ORGANIZATIONS</div>
+  <div class="watermark">Same ministry = same reviewer = 2× chance, 1× prep</div>
+</section>
+
+<!-- SLIDE 07 : DISTRIBUTIONS -->
+<section class="slide">
+  <div class="topbar"><div class="brand">DISTRIBUTION — <span>WHERE THE TOP 20 LIVES</span></div><div class="topmeta">THEME + ORG BREAKDOWN • DENSITY ≠ DESTINY</div></div>
+  <div style="padding:0.28in 0.55in 0.22in 0.55in; flex:1; display:flex; flex-direction:column;">
+    <div class="eyebrow">07 — DENSITY MAP</div>
+    <h2 class="h2">Where to fish. <b>Where not to.</b></h2>
+    <div class="dist-grid">
+      <div>
+        <div class="dist-card">
+          <h4>TOP 20 BY THEME (10 THEMES)</h4>
+          <div class="bar-row"><div class="bar-label">MedTech / BioTech <small>5 PS</small></div><div class="bar-track"><div class="bar-fill" style="width:100%; background:var(--purple)">5 ▸ 25%</div></div></div>
+          <div class="bar-row"><div class="bar-label">Smart Automation <small>5 PS</small></div><div class="bar-track"><div class="bar-fill" style="width:100%; background:#0ea5e9">5 ▸ 25%</div></div></div>
+          <div class="bar-row"><div class="bar-label">Agri / FoodTech <small>3 PS</small></div><div class="bar-track"><div class="bar-fill" style="width:60%; background:#10b981">3 ▸ 15%</div></div></div>
+          <div class="bar-row"><div class="bar-label">Miscellaneous <small>1</small></div><div class="bar-track"><div class="bar-fill" style="width:20%; background:#94a3b8">1</div></div></div>
+          <div class="bar-row"><div class="bar-label">Blockchain <small>1</small></div><div class="bar-track"><div class="bar-fill" style="width:20%; background:#ec4899">1</div></div></div>
+          <div class="bar-row"><div class="bar-label">CleanTech / TransLog / Edu / Veh / Disaster <small>1 each</small></div><div class="bar-track"><div class="bar-fill" style="width:20%; background:#f59e0b">5 ×1</div></div></div>
+          <div style="margin-top:10px; background:var(--bg2); border:1px solid var(--border); border-radius:8px; padding:8px 10px; font-size:7.5px; color:var(--slate); line-height:1.5;">
+            <b style="color:var(--navy)">Takeaway:</b> Half the Top 20 is <b>MedTech + Smart Automation</b> — but both have <b>niche-suppressed CLS</b> (Ayush 2.0, Rural 4.0) not hyped Blockchain/Misc 10.0. Don't chase theme hype; chase org scarcity.
+          </div>
+        </div>
+        <div class="dist-card" style="margin-top:10px;">
+          <h4>TOP 20 BY ORGANIZATION</h4>
+          <div class="bar-row"><div class="bar-label">Rural Development <small>6 PS</small></div><div class="bar-track"><div class="bar-fill" style="width:100%; background:var(--navy)">6 ▸ 30%</div></div></div>
+          <div class="bar-row"><div class="bar-label">Ayush <small>3 PS</small></div><div class="bar-track"><div class="bar-fill" style="width:50%; background:var(--purple)">3 ▸ 15%</div></div></div>
+          <div class="bar-row"><div class="bar-label">Egreen Quanta <small>2</small> • ISRO <small>2</small></div><div class="bar-track"><div class="bar-fill" style="width:33%; background:#475569">4 ▸ 20%</div></div></div>
+          <div class="bar-row"><div class="bar-label">Consumer, Home Affairs, MoSPI, MathWorks, Coop, Maharashtra, Fisheries <small>1 each</small></div><div class="bar-track"><div class="bar-fill" style="width:33%; background:#cbd5e0; color:var(--navy)">7 ×1</div></div></div>
+          <div style="margin-top:8px; font-size:7px; font-family:'Source Code Pro',monospace; color:var(--slate);"><span style="background:var(--purple-light); border:1px solid var(--purple-border); color:var(--purple); padding:2px 6px; border-radius:999px;">Rural = widest safety net (6 shots)</span> <span style="background:var(--green-bg); border:1px solid var(--green-brd); color:var(--green); padding:2px 6px; border-radius:999px;">Ayush = lowest CLS (2.0 org)</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="dist-card">
+          <h4>WPS v3 DISTRIBUTION — ALL 175</h4>
+          <div class="donut-wrap">
+            <div class="donut"><div class="donut-center"><div class="donut-num">37</div><div class="donut-label">WORKABLE ≥6.5</div></div></div>
+            <div class="legend-grid">
+              <div class="leg"><i style="background:var(--purple)"></i><span><b style="color:var(--navy)">21%</b> WORKABLE</span></div>
+              <div class="leg"><i style="background:#0ea5e9"></i><span><b style="color:var(--navy)">31%</b> 6.0-6.49</span></div>
+              <div class="leg"><i style="background:#10b981"></i><span><b style="color:var(--navy)">28%</b> 5.5-5.99</span></div>
+              <div class="leg"><i style="background:#f59e0b"></i><span><b style="color:var(--navy)">14%</b> 5.0-5.49</span></div>
+              <div class="leg"><i style="background:#e2e8f0"></i><span><b style="color:var(--navy)">6%</b> &lt;5.0</span></div>
+              <div class="leg"><i style="background:var(--navy)"></i><span style="font-size:6.5px; color:var(--slate);">v2 had only 7%<br>WORKABLE (13 PS)</span></div>
+            </div>
+          </div>
+          <div style="margin-top:10px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; text-align:center;">
+            <div style="background:var(--bg2); border:1px solid var(--border); border-radius:8px; padding:7px 4px;"><div style="font-size:11px; font-weight:800; color:var(--navy)">5.78</div><div style="font-size:6.5px; font-family:'Source Code Pro',monospace; color:var(--slate); letter-spacing:0.06em;">AVG WPS v3</div><div style="font-size:6px; color:var(--slate)">v2 was 5.33</div></div>
+            <div style="background:var(--bg2); border:1px solid var(--border); border-radius:8px; padding:7px 4px;"><div style="font-size:11px; font-weight:800; color:var(--navy)">6.12</div><div style="font-size:6.5px; font-family:'Source Code Pro',monospace; color:var(--slate); letter-spacing:0.06em;">AVG CLS</div><div style="font-size:6px; color:var(--slate)">3.35 → 8.50</div></div>
+            <div style="background:var(--bg2); border:1px solid var(--border); border-radius:8px; padding:7px 4px;"><div style="font-size:11px; font-weight:800; color:var(--navy)">0/175</div><div style="font-size:6.5px; font-family:'Source Code Pro',monospace; color:var(--slate); letter-spacing:0.06em;">STRONG ≥7.5</div><div style="font-size:6px; color:var(--slate)">closest 7.33</div></div>
+          </div>
+        </div>
+        <div class="dist-card" style="margin-top:10px; background:linear-gradient(180deg, #fff 0%, #f8fafc 100%);">
+          <h4 style="color:var(--purple)">THE PARADOX — EXPLAINED</h4>
+          <p style="margin:6px 0 0 0; font-size:7.8px; color:var(--slate); line-height:1.5;">v3 adds <b style="color:var(--navy)">+24 WORKABLE</b> (13→37) not because PS got better, but because <b style="color:var(--navy)">CLS weight halved 0.25→0.10</b>. For 05 Sep internal, <b>crowd doesn't matter yet</b> — execution does. Nationally, it still matters (v2).</p>
+          <div style="margin-top:8px; display:flex; gap:6px;">
+            <span style="font-size:6.5px; font-family:'Source Code Pro',monospace; background:var(--purple); color:#fff; padding:4px 7px; border-radius:999px; font-weight:700;">v3 = pitch Quality</span>
+            <span style="font-size:6.5px; font-family:'Source Code Pro',monospace; background:#fff; border:1px solid var(--border); color:var(--slate); padding:4px 7px; border-radius:999px; font-weight:600;">v2 = survive freeze</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pagenum">07 / 10 — DISTRIBUTION</div>
+  <div class="watermark">v3 adds 24 WORKABLE by honest re-weighting • not by inflation</div>
+</section>
+
+<!-- SLIDE 08 : SCATTER -->
+<section class="slide">
+  <div class="topbar"><div class="brand">RISK vs REWARD — <span>QUALITY vs CROWD</span></div><div class="topmeta">TOP 20 PLOTTED • SIZE = WPS v3 • COLOR = THEME</div></div>
+  <div style="padding:0.28in 0.55in 0.22in 0.55in; flex:1; display:flex; flex-direction:column;">
+    <div class="eyebrow">08 — RISK × REWARD MAP</div>
+    <h2 class="h2">High quality, low crowd = <b>sweet spot.</b></h2>
+    <div class="scatter-wrap">
+      <div class="scatter-grid"></div>
+      <!-- axes -->
+      <div class="axis-y"><span>10</span><span>8</span><span>6</span><span>4</span><span style="font-size:6px; letter-spacing:0.08em; color:var(--slate);">QUALITY ↑</span></div>
+      <div class="axis-x"><span style="margin-left:0">← LOW crowd (CLS 3)</span><span>5</span><span>6</span><span>7</span><span>HIGH crowd (CLS 8) →</span></div>
+      <!-- quadrants -->
+      <div class="quadrant" style="top:18px; left:42px; background:#e6f7ec; border-color:#b7e5c6; color:var(--green)">★ SWEET SPOT — low crowd, high Q</div>
+      <div class="quadrant" style="top:18px; right:16px; background:#fef3c7; border-color:#f5d78a; color:#92400e">HIGH Q but HIGH crowd — needs moat</div>
+      <div class="quadrant" style="bottom:32px; left:42px; background:var(--bg2); border-color:var(--border); color:var(--slate)">Low Q, low crowd — avoid</div>
+      <!-- dots: map CLS x -> left%, Q y -> bottom% -->
+      <!-- CLS 3.35-8.2 => x 0-100%, Q 6.4-7.62 => y 0-100% -->
+      <div class="dot big" style="left:7%; bottom:88%; background:var(--purple);" title="SIH26045">45</div>
+      <div class="dot big" style="left:33%; bottom:96%; background:#10b981;" title="SIH26014">14</div>
+      <div class="dot big" style="left:14%; bottom:86%; background:var(--purple);" title="SIH26047">47</div>
+      <div class="dot" style="left:35%; bottom:70%; background:var(--slate);">36</div>
+      <div class="dot" style="left:57%; bottom:84%; background:#ec4899;">84</div>
+      <div class="dot" style="left:35%; bottom:42%; background:#10b981;">38</div>
+      <div class="dot" style="left:70%; bottom:62%; background:#0ea5e9;">11</div>
+      <div class="dot" style="left:52%; bottom:76%; background:#6366f1;">01</div>
+      <div class="dot" style="left:4%; bottom:48%; background:var(--purple);">46</div>
+      <div class="dot" style="left:58%; bottom:40%; background:#10b981;">37</div>
+      <div class="dot" style="left:82%; bottom:74%; background:#0ea5e9;">18</div>
+      <div class="dot" style="left:95%; bottom:92%; background:var(--red);">12</div>
+      <div class="dot" style="left:50%; bottom:58%; background:#0ea5e9;">17</div>
+      <div class="dot" style="left:55%; bottom:36%; background:#0ea5e9;">68</div>
+      <div class="dot" style="left:88%; bottom:62%; background:var(--red);">19</div>
+    </div>
+    <div class="insight-row">
+      <div class="insight"><h5>DO: CHASE TOP-LEFT</h5><p><b>SIH26045 (3.35, 7.47)</b>, <b>26047 (3.85, 7.42)</b>, <b>26046 (3.55, 6.60)</b> — Ayush trio sits alone in green zone. Same ministry, lowest CLS in 175.</p></div>
+      <div class="insight"><h5>AVOID: BOTTOM-RIGHT TRAP</h5><p><b>SIH26012 CLS 8.20 Q 7.48</b> looks high-Q but needs 410/500. Without 500-cap moat you'll drown in OCR clones. Demo in 90s ≠ win.</p></div>
+      <div class="insight"><h5>WATCH: HIGH-LEFT = RARE</h5><p><b>SIH26014 (5.00, 7.62)</b> — highest Q in Top 20 but only MED crowd. Best risk-adjusted. If GIS lab available, it's #1 on merit.</p></div>
+    </div>
+  </div>
+  <div class="pagenum">08 / 10 — RISK × REWARD</div>
+  <div class="watermark">Sweet spot = top-left quadrant • bubble size = WPS v3 • color = org</div>
+</section>
+
+<!-- SLIDE 09 : GAME THEORY + FREEZE -->
+<section class="slide">
+  <div class="topbar"><div class="brand">STRATEGY — <span>SECOND-ORDER GAME</span></div><div class="topmeta">WILL EVERYONE PICK #1? • PORTAL FREEZE MATH</div></div>
+  <div style="padding:0.26in 0.55in 0.22in 0.55in; flex:1; display:flex; flex-direction:column;">
+    <div class="eyebrow">09 — WILL HIDDEN GEMS STAY HIDDEN?</div>
+    <h2 class="h2">If everyone ranks, <b>does #1 jam?</b></h2>
+    <div style="display:grid; grid-template-columns:1.15fr 0.85fr; gap:14px; margin-top:10px; align-items:start;">
+      <div>
+        <div style="background:#fff; border:1px solid var(--border); border-radius:12px; padding:12px 13px; box-shadow:var(--shadow);">
+          <div style="font-size:7px; font-family:'Source Code Pro',monospace; letter-spacing:0.12em; color:var(--slate); font-weight:700;">SIMULATION — 35K SOFTWARE IDEAS (SIH2025: 72K total)</div>
+          <div style="margin-top:8px; display:grid; grid-template-columns:70px 1fr; gap:6px 8px; font-size:7.5px; line-height:1.4;">
+            <span style="font-family:'Source Code Pro',monospace; color:var(--slate); font-weight:600;">3% analyst</span><span style="display:flex; align-items:center; gap:6px;"><span style="flex:1; height:10px; background:var(--green); border-radius:999px; width:38%;"></span><span style="font-weight:700; color:var(--navy)">SIH26045 207/500</span><span style="color:var(--slate)">gem stays hidden ✓</span></span>
+            <span style="font-family:'Source Code Pro',monospace; color:var(--slate); font-weight:600;">7% analyst</span><span style="display:flex; align-items:center; gap:6px;"><span style="flex:1; height:10px; background:#f59e0b; border-radius:999px; width:71%;"></span><span style="font-weight:700; color:var(--navy)">355/500</span><span style="color:var(--slate)">inversion yes</span></span>
+            <span style="font-family:'Source Code Pro',monospace; color:var(--slate); font-weight:600;">12% viral</span><span style="display:flex; align-items:center; gap:6px;"><span style="flex:1; height:10px; background:var(--red); border-radius:999px; width:100%;"></span><span style="font-weight:700; color:var(--navy)">541 FREEZE</span><span style="color:var(--slate)">jam</span></span>
+          </div>
+          <div style="margin-top:8px; background:var(--bg2); border:1px solid var(--border); border-radius:8px; padding:7px 9px; font-size:7.5px; color:var(--slate); line-height:1.45;">
+            <b style="color:var(--navy)">Threshold to flip = ~6% analyst.</b> Public signals today: `vedantchalke ★40` + Kaggle 200 → <b>p ≈ 3-5%</b> live. So <b style="color:var(--green)">60-70% chance gem stays hidden til 10 Sep</b>. Viral reel last week = 12% → jam.
+          </div>
+          <div style="margin-top:8px; display:flex; gap:6px;">
+            <span style="font-size:6.5px; font-family:'Source Code Pro',monospace; background:var(--green-bg); border:1px solid var(--green-brd); color:var(--green); padding:3px 7px; border-radius:999px; font-weight:700;">p &lt;6% → v3 holds</span>
+            <span style="font-size:6.5px; font-family:'Source Code Pro',monospace; background:var(--amber-bg); border:1px solid var(--amber-brd); color:var(--amber); padding:3px 7px; border-radius:999px; font-weight:700;">p 7-10% → early submit wins</span>
+            <span style="font-size:6.5px; font-family:'Source Code Pro',monospace; background:var(--red-bg); border:1px solid var(--red-brd); color:var(--red); padding:3px 7px; border-radius:999px; font-weight:700;">p &gt;12% → top 10 freeze</span>
+          </div>
+        </div>
+        <div style="margin-top:10px; background:var(--navy); color:#fff; border-radius:12px; padding:11px 13px; display:flex; gap:12px; align-items:center;">
+          <div style="width:34px; height:34px; border-radius:999px; background:var(--purple); display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0;">◷</div>
+          <div><div style="font-size:8px; font-family:'Source Code Pro',monospace; letter-spacing:0.12em; color:#a5b4fc; font-weight:700;">PORTAL FREEZE MATH — PER PS 500 CAP</div><div style="font-size:8px; color:#cbd5e0; line-height:1.45; margin-top:3px;">All 175 still <b style="color:#fff">0/500</b> on 03 Sep. Even in viral 12% scenario, Top 10 freeze <b style="color:#fff">17-19 Sep</b> — <i style="color:#a5b4fc">after</i> your internal. Submit national <b style="color:#fff">14 Sep 10:00</b> and you beat the jam by 3 days.</div></div>
+        </div>
+      </div>
+      <div>
+        <div style="background:#fff; border:1px solid var(--border); border-radius:12px; padding:11px 13px; box-shadow:var(--shadow);">
+          <h4 style="margin:0; font-size:8px; font-family:'Source Code Pro',monospace; letter-spacing:0.12em; color:var(--purple);">YOUR 2-PS RULE — OFFICIAL SIH</h4>
+          <div style="margin-top:8px; background:var(--red-bg); border:1px solid var(--red-brd); border-radius:8px; padding:8px 9px;">
+            <div style="font-size:7.5px; font-weight:700; color:var(--red); letter-spacing:0.06em;">✕ CANNOT SWITCH PS AFTER SPOC UPLOAD</div>
+            <div style="font-size:7.5px; color:var(--slate); margin-top:3px; line-height:1.4;"><b style="color:var(--navy)">Team + PS ID</b> is primary key. SPOC locks 1 PS ID per winning team on <span style="font-family:'Source Code Pro',monospace; background:#fff; padding:1px 5px; border-radius:999px; border:1px solid var(--red-brd)">sih.gov.in</span> (~15 Sep). No email pivot without re-nomination.</div>
+          </div>
+          <div style="margin-top:8px; background:var(--green-bg); border:1px solid var(--green-brd); border-radius:8px; padding:8px 9px;">
+            <div style="font-size:7.5px; font-weight:700; color:var(--green);">✓ 2 PS = RANKED SHORTLIST</div>
+            <div style="font-size:7.5px; color:var(--slate); margin-top:3px; line-height:1.4;"><b style="color:var(--navy)">PS #1 primary + PS #2 backup</b> for internal. Judges pick one to forward. 2nd used if #1 freezes at 500 or mentor clash. Both must be build-till-Dec choices.</div>
+          </div>
+          <div style="margin-top:8px; display:grid; grid-template-columns:1fr 1fr; gap:6px;">
+            <div style="background:var(--bg2); border:1px solid var(--border); border-radius:8px; padding:7px 8px; text-align:center;"><div style="font-size:9px; font-weight:800; color:var(--navy)">05 Sep</div><div style="font-size:6.5px; font-family:'Source Code Pro',monospace; color:var(--slate)">INTERNAL • pitch 2</div></div>
+            <div style="background:var(--purple-light); border:1px solid var(--purple-border); border-radius:8px; padding:7px 8px; text-align:center;"><div style="font-size:9px; font-weight:800; color:var(--purple)">14 Sep 10:00</div><div style="font-size:6.5px; font-family:'Source Code Pro',monospace; color:var(--purple)">NATIONAL UPLOAD</div></div>
+          </div>
+        </div>
+        <div style="margin-top:10px; background:linear-gradient(135deg, var(--purple) 0%, var(--ruby) 100%); color:#fff; border-radius:12px; padding:11px 13px;">
+          <div style="font-size:7px; font-family:'Source Code Pro',monospace; letter-spacing:0.14em; font-weight:700; color:rgba(255,255,255,0.8)">CONTRARIAN HEDGE — ONE LINE</div>
+          <div style="margin-top:6px; font-size:9px; line-height:1.45; font-weight:400;">Don't bet on one world. <b style="font-weight:700">Pair one analyst gem + one naive-easy with twist.</b> If `p` stays low, gem wins. If `p` spikes, twist wins. You win both.</div>
+          <div style="margin-top:8px; font-size:7px; font-family:'Source Code Pro',monospace; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.25); padding:5px 8px; border-radius:999px; text-align:center;">Combo A does this • 26045 (gem) + 26047 (easy-med with same stack)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pagenum">09 / 10 — STRATEGY</div>
+  <div class="watermark">Early submit beats game theory • 14 Sep 10:00 > 17 Sep freeze</div>
+</section>
+
+<!-- SLIDE 10 : NEXT STEPS -->
+<section class="slide">
+  <div class="topbar"><div class="brand">NEXT STEPS — <span>48-HOUR PLAN</span></div><div class="topmeta">IPS ACADEMY • 03 SEP → 05 SEP INTERNAL → 14 SEP NATIONAL</div></div>
+  <div style="padding:0.28in 0.55in 0.22in 0.55in; flex:1; display:flex; flex-direction:column;">
+    <div class="eyebrow">10 — GO WIN</div>
+    <h2 class="h2">48 hours. <b>Two PPTs. One demo.</b></h2>
+    <div class="timeline">
+      <div class="tcard featured">
+        <h4>TODAY 03 SEP — DECIDE</h4>
+        <h3>Lock Combo A: 26045 + 26047</h3>
+        <p>Both Ayush, same mentor. Tell SPOC: <i>"We commit to whichever you forward."</i> Create 2× 6-slide PPTs (shared slide 3 architecture).</p>
+        <div style="margin-top:8px; display:flex; gap:5px; flex-wrap:wrap;"><span class="tag purple">Ayush</span><span class="tag green">LOW freeze</span></div>
+        <div style="margin-top:8px; font-size:7px; font-family:'Source Code Pro',monospace; background:var(--purple); color:#fff; padding:4px 7px; border-radius:999px; display:inline-block; font-weight:700;">DO NOW →</div>
+      </div>
+      <div class="tarrow">→</div>
+      <div class="tcard">
+        <h4>04 SEP 10:00 — BUILD</h4>
+        <h3>One RAG + citation MVP</h3>
+        <p>TKDL on Qdrant + jurisdiction toggle + abstention benchmark. Reuse for both PPTs. Add Bhashini voice as +10. Demo = 90s.</p>
+        <div style="margin-top:8px; font-size:7px; font-family:'Source Code Pro',monospace; color:var(--slate); background:var(--bg2); border:1px solid var(--border); padding:5px 7px; border-radius:999px; display:inline-block;">CHECK: <span style="color:var(--green); font-weight:700;">citation recall &gt;0.92</span></div>
+      </div>
+      <div class="tarrow">→</div>
+      <div class="tcard">
+        <h4>05 SEP — PITCH & WIN</h4>
+        <h3>Internal hackathon</h3>
+        <p>Lead with SIH26045 (Q 7.47). Keep SIH26047 as backup slide 6. National upload ready <b>14 Sep 10:00</b> — 3 days before freeze.</p>
+        <div style="margin-top:8px; font-size:7px; font-family:'Source Code Pro',monospace; background:var(--navy); color:#fff; padding:4px 7px; border-radius:999px; display:inline-block; font-weight:700;">UPLOAD 14 SEP 10:00</div>
+      </div>
+    </div>
+    <div style="margin-top:12px; display:grid; grid-template-columns:1.4fr 0.6fr; gap:12px; align-items:stretch;">
+      <div style="background:#fff; border:1px solid var(--border); border-radius:12px; padding:12px 14px; box-shadow:var(--shadow);">
+        <div style="font-size:7px; font-family:'Source Code Pro',monospace; letter-spacing:0.12em; color:var(--slate); font-weight:700;">DELIVERABLES CHECKLIST — TICK BEFORE 04 SEP 18:00</div>
+        <div style="margin-top:8px; display:grid; grid-template-columns:1fr 1fr; gap:6px 12px; font-size:7.8px; color:var(--slate); line-height:1.4;">
+          <span><span class="check">✓</span><b style="color:var(--navy)">2× 6-slide PPTs</b> (SIH template, mentor name on slide 1)</span>
+          <span><span class="check">✓</span><b style="color:var(--navy)">Demo video</b> 90s + live fallback (offline)</span>
+          <span><span class="check">✓</span><b style="color:var(--navy)">GitHub</b> public + README + architecture.png</span>
+          <span><span class="check">✓</span><b style="color:var(--navy)">SPOC email</b> with both PS IDs + preference rank</span>
+        </div>
+      </div>
+      <div style="background:var(--navy); color:#fff; border-radius:12px; padding:12px 14px; display:flex; flex-direction:column; justify-content:center;">
+        <div style="font-size:7px; font-family:'Source Code Pro',monospace; letter-spacing:0.12em; color:#a5b4fc; font-weight:700;">FILES READY FOR YOU</div>
+        <div style="margin-top:8px; font-size:7.5px; font-family:'Source Code Pro',monospace; line-height:1.6; color:#cbd5e0;">
+          <span style="color:#fff">all-175-evaluated-v3.json</span> (365KB)<br>
+          <span style="color:#fff">all-175-evaluated-v3.csv</span> (41KB)<br>
+          <span style="color:#fff">06-complete-ps-ranking-v3.md</span> (332 lines)<br>
+          <span style="color:#94a3b8">+ this PDF — share with team</span>
+        </div>
+        <div style="margin-top:10px; font-size:7px; font-family:'Source Code Pro',monospace; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); padding:5px 8px; border-radius:999px; text-align:center; color:#e2e8f0;">IPS Academy • 05 Sep 2026 • Win internal first.</div>
+      </div>
+    </div>
+    <div style="margin-top:10px; text-align:center; font-size:7px; font-family:'Source Code Pro',monospace; color:var(--slate); letter-spacing:0.06em;">
+      Built from <span style="background:var(--bg2); border:1px solid var(--border); padding:1px 5px; border-radius:999px; color:var(--navy)">vedantchalke36/sih2026_ps.json</span> • reproducible: <span style="background:#0f172a; color:#e2e8f0; padding:1px 5px; border-radius:999px;">python3 /tmp/eval_v2.py</span> • v3 weights: Q×0.50 + (10-CLS)×0.10 + Diff×0.20 • No STRONG ≥7.5 in 175 — closest is your #1 at 7.33.
+    </div>
+  </div>
+  <div class="pagenum">10 / 10 — NEXT STEPS</div>
+  <div class="watermark">IPS Academy • SIH26 • Good luck. Build fast, cite everything.</div>
+</section>
+
+</body>
+</html>

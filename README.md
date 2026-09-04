@@ -1,8 +1,8 @@
-# SIH26045 — IP-SAKTI Sahayak (Platform Version)
+# SIH26045 — IP Sakta 2.0 (Enhancement Strategy)
 
 **Smart India Hackathon 2026 • Ministry of Ayush • MedTech/BioTech • Software • Theme 18**
 **Problem Statement v3 • WPS 7.33 #1 • CLS 3.35 (167/500)**
-*Team: ps45 • IP-SAKTI PLATFORM — 3 modules for Ayurveda startup lifecycle: IP guidance, compliance tracking, innovation support*
+*Team: ps45 • Enhancing IP Sakta with 5 features: Citation Validator, Dual Jurisdiction Toggle, TKDL Proxy, ABS Calculator, Sarvam AI Voice*
 
 ---
 
@@ -16,15 +16,36 @@ An Ayurvedic startup selling capsules (e.g. Ashwagandha + Shilajit) needs to ans
 3. **Do we owe ABS?** — Does using Indian biological resources (neem, tulsi) trigger the Biological Diversity Act?
 4. **Where are we filing?** — India alone, or PCT/Madrid/Hague abroad? The new **WIPO GRATK Treaty (May 2024)** now requires disclosure of where genetic resources come from.
 
-**Our Insight:** A chatbot is a **feature**, not a **product**. The Ministry of Ayush has launched fragmented platforms (Ayush Nivesh Saarthi, Ayush Suraksha Portal, BHASHINI Rajyam) but NO **unified startup lifecycle tool**.
+**Our Insight:** IP Sakta is an EXISTING Ministry of Ayush customer support tool. The PS asks us to **ENHANCE** it with features that solve these pain points — not build a new platform from scratch.
 
-**Our Solution:** **IP-SAKTI PLATFORM** — 3 integrated modules that address the FULL lifecycle of an Ayurveda business:
+**Our Solution:** **IP Sakta 2.0** — 5 high-impact enhancements to the existing tool:
 
-| Module | What It Does | Differentiator |
-|--------|-------------|----------------|
-| **IP-SAKTI** | Dual RAG + citation validator + formulation wizard | 100% citation correctness or ABSTAIN |
-| **Compliance SAKTI** | ABS calculator + regulatory news + compliance calendar | "When to comply" + "How much it costs" |
-| **Innovation SAKTI** | TKDL proxy + prior art detector + objection predictor | "Did someone else patent this?" + "What will examiner reject?" |
+| Enhancement | What It Adds | Build Time | Impact |
+|-------------|-------------|------------|--------|
+| **Citation Validator** | Every answer carries `[CIT: ...]` or ABSTAIN | 1.5h | 🔥🔥🔥🔥🔥 |
+| **Dual Jurisdiction Toggle** | India vs International answers side-by-side | 2h | 🔥🔥🔥🔥 |
+| **TKDL Proxy Search** | Simulates TKDL via API + IMPPAT | 2h | 🔥🔥🔥🔥🔥 |
+| **ABS Calculator** | Calculates 3-5% benefit sharing | 1.5h | 🔥🔥🔥🔥 |
+| **Sarvam AI Voice** | Hindi ↔ English voice pipeline | 2h | 🔥🔥🔥🔥 |
+
+---
+
+## 🏗️ What We've Built So Far (Iteration 1 & 2)
+
+All files live in `/Users/shreyashsingh/my info/projects/sih26/`
+
+| Component | What It Does | Location |
+|-----------|-------------|----------|
+| **Legal Corpus** | 10 core statutes with verified URLs, Gazette dates, SHA256 checksums. | `docs/legal-corpus-2026-09-03.md` |
+| **Citation Validator** | **56 regex patterns** that check every `[CIT: ...]` tag. | `prototype/citation_validator/validator.py` |
+| **Evaluation Harness** | **20 gold Q-A pairs** + **5 adversarial Qs**. | `prototype/eval_harness/gold_qa.json` + `adversarial.json` |
+| **Neo4j Knowledge Graph** | Structured graph with 7 node types, 15 statutes. | `prototype/neo4j_schema/schema.cypher` |
+| **Sarvam AI Integration** | Python client for Sarvam AI (Saaras v3 ASR + Bulbul v3 TTS). | `docs/sarvam-api-2026-09-03.md` |
+| **Formulation Wizard** | 5-question decision tree with exact statute citations. | `docs/formulation-wizard-2026-09-03.md` |
+| **Deep Research Doc** | Full strategy, moats, 48-hour build order. | `docs/sih26045-deep-research.md` |
+| **Field Intelligence** | Current situation 2024-2026 — BD Rules 2024, NBA Regs, IP India Guidelines. | `docs/field-intelligence-2026-09-03.md` |
+| **Enhancement Strategy** | Strategic document for IP Sakta 2.0 enhancements. | `docs/ip-sakta-enhancement-strategy.md` |
+| **Solution Discovery Loop** | Structured brainstorm for differentiated features. | `docs/solution-discovery-loop.md` |
 
 ---
 

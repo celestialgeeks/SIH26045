@@ -1,8 +1,8 @@
-# SIH26045 — IP-SAKTI Sahayak
+# SIH26045 — IP-SAKTI Sahayak (Enhanced)
 
 **Smart India Hackathon 2026 • Ministry of Ayush • MedTech/BioTech • Software • Theme 18**
 **Problem Statement v3 • WPS 7.33 #1 • CLS 3.35 (167/500)**
-*Team: ps45 • RAG + source-cited + multilingual + jurisdiction-aware assistant for Ayurvedic IP & regulatory guidance*
+*Team: ps45 • RAG + source-cited + multilingual + jurisdiction-aware + **TKDL proxy + cost calculator + prior art detector** for Ayurvedic IP & regulatory guidance*
 
 ---
 
@@ -26,6 +26,10 @@ An Ayurvedic startup selling capsules (e.g. Ashwagandha + Shilajit) needs to ans
 - Cites exact law sections — or says "ABSTAIN" if it can't verify
 - Works in Hindi + English (via **Sarvam AI** for ASR/TTS, Sarvam Translate for language)
 - Has an audit log (for DPDP compliance)
+- **Simulates TKDL access** via API + IMPPAT (differentiator)
+- **Calculates IP costs** — government fees + facilitator costs (differentiator)
+- **Detects prior art** — "Did someone else patent this?" (differentiator)
+- **Predicts objections** — "What will the examiner reject?" (differentiator)
 
 ---
 
@@ -42,6 +46,7 @@ All files live in `/Users/shreyashsingh/my info/projects/sih26/`
 | **Sarvam AI Integration** | Python client for Sarvam AI (Saaras v3 ASR + Bulbul v3 TTS + Translate). 22 Indian languages, code-mixing support, sub-150ms latency. **Replaces Bhashini for audio.** | `docs/sarvam-api-2026-09-03.md` |
 | **Formulation Wizard** | 5-question decision tree with exact statute citations at every branch. Classifies: Classical → ABSTAIN (Sec 3(p)); New Drug → patent possible; Phytopharma → dual track; Aahar → no patent; Cosmetic → design/TM. | `docs/formulation-wizard-2026-09-03.md` |
 | **Deep Research Doc** | Full strategy, moats, 48-hour build order, judge scoring rubric, "one-pager" to beat 500 teams. | `docs/sih26045-deep-research.md` |
+| **Solution Discovery Loop** | Structured brainstorm for differentiated features (TKDL proxy, cost calculator, prior art detector, objection predictor). | `docs/solution-discovery-loop.md` |
 
 **What's in the archive (deleted/removed):**
 - `ps46/` — was misfiled; those 7 docs were actually SIH26045, correctly restored under ps45 paths.
@@ -69,8 +74,9 @@ From @researcher — 5 gaps to close before demo:
 
 ### **Phase 1 — Discover (1-2 days)**
 - [ ] Review this README + `sih26045-deep-research.md`
+- [ ] Complete `solution-discovery-loop.md` — add your 3 feature ideas
+- [ ] Score & prioritize features (STEP 6 in discovery loop)
 - [ ] Shortlist 5 Qs from the formulation wizard decision tree
-- [ ] Check GitHub for any external code (search `ip-sakti-sahayak-SIH26045`)
 
 ### **Phase 2 — Research (2-3 days)**
 - [ ] Download + ingest 6 core statutes into vector DB (Qdrant or Chroma):
@@ -87,11 +93,17 @@ From @researcher — 5 gaps to close before demo:
 - [ ] Build the 5-question formulation wizard (hardcoded, dict-based — no LLM needed)
 - [ ] Integrate citation validator — every answer must pass or ABSTAIN
 - [ ] Add Sarvam AI: Hindi voice → ASR → Translate → Retrieve EN → Answer EN → Translate → TTS
+- [ ] **DIFFERENTIATOR 1: TKDL Proxy Search** — Search API + IMPPAT as "fake TKDL"
+- [ ] **DIFFERENTIATOR 2: Cost Calculator** — Government fees + facilitator costs
+- [ ] **DIFFERENTIATOR 3: Prior Art Detector** — Search Indian patent database
+- [ ] **DIFFERENTIATOR 4: ABS Calculator** — 3-5% benefit sharing calculation
+- [ ] **DIFFERENTIATOR 5: Objection Predictor** — Based on 1000 patent objections
 - [ ] Build audit_log.jsonl (timestamp, query, classification, citations, abstention_flag)
 - [ ] Add corpus freshness badge: "Last synced: Rules 2024 (Gazette 25 Oct 2024)"
 
 - [ ] **Stage 2 (Moat):** Load Neo4j schema, test traversal queries
 - [ ] Build agentic router: classify query → vector_search vs graph_traversal vs db_lookup
+- [ ] **DIFFERENTIATOR 6: Interactive Graph Visualization** — Click nodes to see relationships
 
 - [ ] **Stage 3 (Polish):** Add disabled-by-default adapter cards (LexisNexis, paid connectors)
 - [ ] Full voice demo flow (Sarvam pipeline)
@@ -99,7 +111,7 @@ From @researcher — 5 gaps to close before demo:
 
 ### **Phase 4 — Present (1-2 days)**
 - [ ] 6-slide IDEA presentation (problem → solution → approach → feasibility → impact → references)
-- [ ] Slide 5: Show evaluation numbers — answer accuracy >0.85, citation correctness 100% or ABSTAIN, abstention rate >0.80, multilingual BLEU >32
+- [ ] Slide 5: Show evaluation numbers — answer accuracy >0.85, citation correctness 100% or ABSTAIN, abstention rate >0.80, multilingual quality clear
 - [ ] Upload PPT via kimi-webbridge to sih.gov.in portal
 
 ### **Phase 5 — Submit**
@@ -128,7 +140,7 @@ From @researcher — 5 gaps to close before demo:
 
 ## 🛡️ Our Moats — Why We'll Beat 500 Teams
 
-1. **Never fabricate TKDL** — Show `API Vol-III p.124` as proxy, with *Facilitator* escalation. Never claim "as per TKDL #AK-123".
+1. **TKDL Proxy Search** — Show `API Vol-III p.124` as proxy, with *Facilitator* escalation. Never claim "as per TKDL #AK-123".
 
 2. **Two tabs, always** — India answer | International answer side-by-side. Judges scan this in 5s.
 
@@ -141,6 +153,12 @@ From @researcher — 5 gaps to close before demo:
 6. **Jurisdiction toggle** — Architecture enforces two separate RAG chains + two answer cards. Never mix Indian + International law in same answer.
 
 7. **Sarvam AI** — Production-grade ASR/TTS for 22 Indian languages, code-mixing support, sub-150ms latency.
+
+8. **Cost Calculator** — "Total IP cost for your product" — government fees + facilitator costs.
+
+9. **Prior Art Detector** — "Did someone else patent this?" — search Indian patent database.
+
+10. **Objection Predictor** — "Based on 1000 patent objections, here's what the examiner will reject."
 
 ---
 
@@ -157,7 +175,8 @@ From @researcher — 5 gaps to close before demo:
 │   │   ├── citation-validator-2026-09-03.md  # 56 regex patterns
 │   │   ├── eval-harness-2026-09-03.md    # 20 gold + 5 adversarial Qs
 │   │   ├── neo4j-schema-2026-09-03.md    # Neo4j DDL + traversal queries
-│   │   └── field-intelligence-2026-09-03.md # Current news 2024-2026
+│   │   ├── field-intelligence-2026-09-03.md # Current news 2024-2026
+│   │   └── solution-discovery-loop.md    # DIFFERENTIATOR BRAINSTORM (NEW)
 │   │
 │   └── ps168/        ← SIH26168 (ISRO Dead Reckoning, for comparison only)
 │       └── sih26168-deep-research.md   # Full strategy + moats + benchmark table
@@ -247,10 +266,10 @@ print('Valid citations:', result['valid_citations'], '/', result['total_citation
 **PS 26045: IP-SAKTI Sahayak** (Ministry of Ayush • MedTech/BioTech • Software • WPS 7.33 • #1 • CLS 3.35 LOW)
 - Problem: Ayurvedic startup product classification (Classical/New Drug/Phytopharma/Aahar/Cosmetic); IP regime; ABS liability; India vs International filing; GRATK Treaty disclosure
 - Key corpus: 10 statutes (Patents Act/Rules 2024, BD Act/Amendment/Rules 2024, GRATK 2024, D&C Act, NDCT, FSSAI, etc.)
-- Benchmarks: Citation correctness 100% or ABSTAIN; abstention >0.80; multilingual BLEU >32
+- Benchmarks: Citation correctness 100% or ABSTAIN; abstention >0.80; multilingual quality clear
 - Core issues: Dual RAG (India + International collections); citation validator regex; formulation wizard (5 questions); Sarvam AI Hindi↔EN; audit_log.jsonl; two answer tabs
 - Winning architecture: Dual RAG + citation validator + Neo4j knowledge graph + formulation wizard + Sarvam translation
-- Moats: Never fabricate TKDL; two tabs always; citation or abstain; not legal advice; graph depth; jurisdiction toggle; Sarvam AI for audio
+- Moats: TKDL proxy search; two tabs always; citation or abstain; not legal advice; graph depth; jurisdiction toggle; Sarvam AI; cost calculator; prior art detector; objection predictor
 - Comparative narrative with 168: *"Both are 'constraint graph' problems — one hallucinates statutes, one drifts position. Both solved by RAG-like constrained inference — one with law corpus, one with road graph."*
 
 **Key Difference:** PS 168 is **physics/engineering** (GNSS/IMU fusion, drift mitigation, map-matching); PS 26045 is **law/regulatory** (statute citation, jurisdiction isolation, ABS compliance, citation grounding). Different data types, different validation methods, but same architectural pattern of **constrained inference over a trusted graph**.
@@ -263,9 +282,10 @@ print('Valid citations:', result['valid_citations'], '/', result['total_citation
 - **Add regex to validator?** Read `prototype/citation_validator/validator.py` → add `CitationPattern(...)` entry → run `pytest test_validator.py`
 - **Test Sarvam AI?** Sign up at dashboard.sarvam.ai → generate API key → test `SarvamClient` from `docs/sarvam-api-2026-09-03.md`
 - **Validate Neo4j?** Spin up Neo4j 5 → run `init_graph.py` → test 6 traversal queries from `prototype/neo4j_schema/schema.cypher`
+- **Brainstorm features?** Read `docs/solution-discovery-loop.md` → fill in your 3 ideas → score & prioritize
 
 **All files are in `/Users/shreyashsingh/my info/projects/sih26/`. Never write outside the vault (`/Users/shreyashsingh/my info/`).**
 
 ---
-*Generated: 2026-09-03 • Active profile: ps45 • Model: muse-spark-1.2-contributor-free • Provider: opencode-free*
+*Generated: 2026-09-04 • Active profile: ps45 • Model: muse-spark-1.2-contributor-free • Provider: opencode-free*
 *SIH26045 is the #1 pick from WPS v3 7.33. This README replaces all prior drafts. Keep updated as Iteration 3 progresses.*

@@ -1,8 +1,10 @@
-# SIH26045 — IP Sakta 2.0 (Enhancement Strategy)
+# SIH26045 — IP-SAKTI Sahayak 2.0 (Deployable Platform)
 
 **Smart India Hackathon 2026 • Ministry of Ayush • MedTech/BioTech • Software • Theme 18**
-**Problem Statement v3 • WPS 7.33 #1 • CLS 3.35 (167/500)**
-*Team: ps45 • Enhancing IP Sakta with 5 features: Citation Validator, Dual Jurisdiction Toggle, TKDL Proxy, ABS Calculator, Sarvam AI Voice*
+**Problem Statement v3 • WPS 7.33 #1 • CLS 3.35 (167/500) — Deployable for Victory**
+*Team: ps45 Samhita Navigators • 5 Corpora (55K chunks) → 3 Pillars (Knowledge | Reasoning | Delivery) • Decision Log: `docs/sih26045-decision-log-2026-09-05.md`*
+
+> **2026-09-05 Shift:** Internal MVP (10 docs, 5 formulations) → **Deployable platform** (13 docs incl. UPI/InPASS/TM Registry, 3,500 formulations, live patent/TM search, Gazette watcher). Every answer `[CIT]` or **ABSTAIN**. See Decision Log §5-§7 for full trace.
 
 ---
 

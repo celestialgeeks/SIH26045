@@ -1,6 +1,6 @@
 # SIH26045 — Legal Corpus Acquisition (Exact Sources)
 **Date:** 2026-09-03 | **Researcher:** @researcher | **Iteration:** 1/4
-**Status:** COMPLETE — All 10 core documents located with verified URLs, Gazette dates, access methods
+**Status:** EXTENDED 2026-09-05 — 10→13 docs. Added UPI + InPASS + TM Registry (deployable completeness). See §Decision Log 2026-09-05. G.S.R.665(E) direct Gazette link TODO.
 
 ---
 
